@@ -1,0 +1,462 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>在HTML中使用JavaScrpt | 前端之路</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="jack">
+    
+
+    
+    <meta name="description" content="第二章 在HTML中使用JavaScript2.1 &amp;lt;script&amp;gt;元素&amp;lt;script src=”demo.js”&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在HTML中使用JavaScrpt">
+<meta property="og:url" content="http://yoursite.com/2016/01/05/2-在HTML中使用JavaScrpt/index.html">
+<meta property="og:site_name" content="前端之路">
+<meta property="og:description" content="第二章 在HTML中使用JavaScript2.1 &amp;lt;script&amp;gt;元素&amp;lt;script src=”demo.js”&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
+<meta property="og:updated_time" content="2016-01-05T06:48:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在HTML中使用JavaScrpt">
+<meta name="twitter:description" content="第二章 在HTML中使用JavaScript2.1 &amp;lt;script&amp;gt;元素&amp;lt;script src=”demo.js”&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
+
+    
+    <link rel="alternative" href="/atom.xml" title="前端之路" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="前端之路" title="前端之路"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="前端之路">前端之路</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/01/05/2-在HTML中使用JavaScrpt/" title="在HTML中使用JavaScrpt" itemprop="url">在HTML中使用JavaScrpt</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
+		
+  <p class="article-time">
+    <time datetime="2016-01-05T06:25:13.000Z" itemprop="datePublished"> 发表于 2016-01-05</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u7B2C_u4E8C_u7AE0__u5728HTML_u4E2D_u4F7F_u7528JavaScript"><span class="toc-number">1.</span> <span class="toc-text">第二章 在HTML中使用JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1__26lt_3Bscript_26gt_3B_u5143_u7D20"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 <script>元素</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="u7B2C_u4E8C_u7AE0__u5728HTML_u4E2D_u4F7F_u7528JavaScript"><a href="#u7B2C_u4E8C_u7AE0__u5728HTML_u4E2D_u4F7F_u7528JavaScript" class="headerlink" title="第二章 在HTML中使用JavaScript"></a>第二章 在HTML中使用JavaScript</h1><h2 id="2-1__26lt_3Bscript_26gt_3B_u5143_u7D20"><a href="#2-1__26lt_3Bscript_26gt_3B_u5143_u7D20" class="headerlink" title="2.1 &lt;script&gt;元素"></a>2.1 &lt;script&gt;元素</h2><p>&lt;script src=”demo.js”&gt;&lt;/script&gt;尽管&lt;script&gt; 标签内没有内容，结束的 &lt;/script&gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。<br><a id="more"></a></p>
+<ul>
+<li>type 这个属性不是必须的，默认值是 “text /javascript”，表示的是编写代码使用的脚本语言的内容类型（也称为MIME 类型）。服务器在传送js文件时使用的MIME类型，通常是application/x-javascript，但在type中设置这个值可能会导致脚本被忽略，考虑到约定俗成和最大浏览器兼容性，目前type属性的值依旧还是text/javascript。</li>
+</ul>
+<blockquote>
+<ol>
+<li><p>如果通过&lt;script&gt;&lt;/script&gt;向页面写入一段可以执行的js代码？。</p>
+<pre><code>&lt;script&gt;
+    document.write(&apos;&amp;lt;script&amp;gt;alert(0)&amp;lt;/script&amp;gt;&apos;);//alert(0); 不执行
+    document.write(&apos;&lt;script&gt;alert(4)&lt;/scr&apos;+&apos;ipt&gt;&apos;); //正常弹窗
+    document.write(&apos;&lt;script&gt;alert(2)&lt;\/script&gt;&apos;); //正常弹窗
+    document.write(&apos;&lt;script&gt;alert(3)&lt;/script&gt;&apos;); //报错
+&lt;/script&gt;
+</code></pre></li>
+<li><p>执行顺序：<br>无论如何包含代码，只要不存在defer 和async 属性，浏览器都会按照&lt;script&gt;元素在页面中出现的先后顺序对它们依次进行解析。换句话说，在第一个&lt;script&gt;元素包含的代码解析完成后，第二个&lt;script&gt;包含的代码才会被解析，然后才是第三个、第四个……<br>3.引用位置：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Example HTML Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- 这里放内容 --&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;example1.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;example2.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></li>
+</ol>
+</blockquote>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/01/05/2-在HTML中使用JavaScrpt/" data-title="在HTML中使用JavaScrpt | 前端之路" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/01/05/1-JavaScrpt简介/"  title="JavaScrpt简介">
+ <strong>下一篇：</strong><br/> 
+ <span>JavaScrpt简介
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u7B2C_u4E8C_u7AE0__u5728HTML_u4E2D_u4F7F_u7528JavaScript"><span class="toc-number">1.</span> <span class="toc-text">第二章 在HTML中使用JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1__26lt_3Bscript_26gt_3B_u5143_u7D20"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 <script>元素</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Larry Page in Google. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="jack">jack</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
