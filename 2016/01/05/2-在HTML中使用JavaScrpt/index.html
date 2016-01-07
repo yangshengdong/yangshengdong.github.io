@@ -11,16 +11,20 @@
     
 
     
-    <meta name="description" content="第二章 在HTML中使用JavaScript2.1 &amp;lt;script&amp;gt;元素&amp;lt;script src=”demo.js”&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
+    <meta name="description" content="#第二章 在HTML中使用JavaScript
+2.1 &amp;lt;script&amp;gt;元素&amp;lt;script src=&amp;quot;demo.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在HTML中使用JavaScrpt">
 <meta property="og:url" content="http://yoursite.com/2016/01/05/2-在HTML中使用JavaScrpt/index.html">
 <meta property="og:site_name" content="前端之路">
-<meta property="og:description" content="第二章 在HTML中使用JavaScript2.1 &amp;lt;script&amp;gt;元素&amp;lt;script src=”demo.js”&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
-<meta property="og:updated_time" content="2016-01-05T06:48:40.000Z">
+<meta property="og:description" content="#第二章 在HTML中使用JavaScript
+2.1 &amp;lt;script&amp;gt;元素&amp;lt;script src=&amp;quot;demo.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
+<meta property="og:image" content="http://yoursite.com/2016/01/05/2-在HTML中使用JavaScrpt/deferAsync.png">
+<meta property="og:updated_time" content="2016-01-07T13:20:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在HTML中使用JavaScrpt">
-<meta name="twitter:description" content="第二章 在HTML中使用JavaScript2.1 &amp;lt;script&amp;gt;元素&amp;lt;script src=”demo.js”&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
+<meta name="twitter:description" content="#第二章 在HTML中使用JavaScript
+2.1 &amp;lt;script&amp;gt;元素&amp;lt;script src=&amp;quot;demo.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
 
     
     <link rel="alternative" href="/atom.xml" title="前端之路" type="application/atom+xml">
@@ -96,13 +100,18 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u7B2C_u4E8C_u7AE0__u5728HTML_u4E2D_u4F7F_u7528JavaScript"><span class="toc-number">1.</span> <span class="toc-text">第二章 在HTML中使用JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1__26lt_3Bscript_26gt_3B_u5143_u7D20"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 <script>元素</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1__26lt_3Bscript_26gt_3B_u5143_u7D20"><span class="toc-number">1.</span> <span class="toc-text">2.1 <script>元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-1__u6807_u7B7E_u7684_u4F4D_u7F6E"><span class="toc-number">2.</span> <span class="toc-text">2.1.1 标签的位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-2__u5EF6_u8FDF_u811A_u672C_defer"><span class="toc-number">3.</span> <span class="toc-text">2.1.2 延迟脚本 defer</span></a></li></ol>
 		
 		</div>
 		
-		<h1 id="u7B2C_u4E8C_u7AE0__u5728HTML_u4E2D_u4F7F_u7528JavaScript"><a href="#u7B2C_u4E8C_u7AE0__u5728HTML_u4E2D_u4F7F_u7528JavaScript" class="headerlink" title="第二章 在HTML中使用JavaScript"></a>第二章 在HTML中使用JavaScript</h1><h2 id="2-1__26lt_3Bscript_26gt_3B_u5143_u7D20"><a href="#2-1__26lt_3Bscript_26gt_3B_u5143_u7D20" class="headerlink" title="2.1 &lt;script&gt;元素"></a>2.1 &lt;script&gt;元素</h2><p>&lt;script src=”demo.js”&gt;&lt;/script&gt;尽管&lt;script&gt; 标签内没有内容，结束的 &lt;/script&gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。<br><a id="more"></a></p>
+		<p>#第二章 在HTML中使用JavaScript</p>
+<h2 id="2-1__26lt_3Bscript_26gt_3B_u5143_u7D20"><a href="#2-1__26lt_3Bscript_26gt_3B_u5143_u7D20" class="headerlink" title="2.1 &lt;script&gt;元素"></a>2.1 &lt;script&gt;元素</h2><p><code>&lt;script src=&quot;demo.js&quot;&gt;&lt;/script&gt;</code>尽管<code>&lt;script&gt;</code> 标签内没有内容，结束的 <code>&lt;/script&gt;</code> 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。<br><a id="more"></a></p>
 <ul>
 <li>type 这个属性不是必须的，默认值是 “text /javascript”，表示的是编写代码使用的脚本语言的内容类型（也称为MIME 类型）。服务器在传送js文件时使用的MIME类型，通常是application/x-javascript，但在type中设置这个值可能会导致脚本被忽略，考虑到约定俗成和最大浏览器兼容性，目前type属性的值依旧还是text/javascript。</li>
+<li>async  只适用外部引入脚本。</li>
+<li>defer 只适用外部引入脚本。</li>
+<li>language 已废弃。</li>
+<li>src</li>
 </ul>
 <blockquote>
 <ol>
@@ -114,8 +123,11 @@
     document.write(&apos;&lt;script&gt;alert(3)&lt;/script&gt;&apos;); //报错
 &lt;/script&gt;
 </code></pre></li>
-<li><p>执行顺序：<br>无论如何包含代码，只要不存在defer 和async 属性，浏览器都会按照&lt;script&gt;元素在页面中出现的先后顺序对它们依次进行解析。换句话说，在第一个&lt;script&gt;元素包含的代码解析完成后，第二个&lt;script&gt;包含的代码才会被解析，然后才是第三个、第四个……<br>3.引用位置：</p>
-<pre><code>&lt;!DOCTYPE html&gt;
+<li><p>执行顺序：<br>无论如何包含代码，只要不存在defer 和async 属性，浏览器都会按照<code>&lt;script&gt;</code>元素在页面中出现的先后顺序对它们依次进行解析。换句话说，在第一个<code>&lt;script&gt;</code>元素包含的代码解析完成后，第二个<code>&lt;script&gt;</code>包含的代码才会被解析，然后才是第三个、第四个……</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="2-1-1__u6807_u7B7E_u7684_u4F4D_u7F6E"><a href="#2-1-1__u6807_u7B7E_u7684_u4F4D_u7F6E" class="headerlink" title="2.1.1 标签的位置"></a>2.1.1 标签的位置</h2><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Example HTML Page&lt;/title&gt;
@@ -126,9 +138,39 @@
         &lt;script type=&quot;text/javascript&quot; src=&quot;example2.js&quot;&gt;&lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></li>
-</ol>
+</code></pre><h2 id="2-1-2__u5EF6_u8FDF_u811A_u672C_defer"><a href="#2-1-2__u5EF6_u8FDF_u811A_u672C_defer" class="headerlink" title="2.1.2 延迟脚本 defer"></a>2.1.2 延迟脚本 defer</h2><p>defer这个属性的用途是表明脚本在执行时不会影响页面的构造。也就是说，脚本会被延迟到整个页面都解析完毕(<code>/HTML</code>)后再运行。因此，在<code>&lt;script&gt;</code>元素中设置defer 属性，相当于告诉浏览器立即下载，但延迟执行。</p>
+<blockquote>
+<p><strong>注意：</strong><br>多个延迟脚本并不一定会按照顺序执行，因此最好只包含一个延迟脚本。<br><strong>浏览器支持情况：</strong><br>IE4、Firefox 3.5、Safari 5 和Chrome ，其他浏览器会忽略这个属性。为此，把延迟脚本放在页面底部仍然是最佳选择。<br><strong>defer执行的脚本都会在DOMContentLoaded之前就执行，defer会阻塞页面加载</strong></p>
+<p>##2.1.3 异步脚本 async<br>HTML5 为<code>&lt;script&gt;</code>元素定义了async 属性。指定async 属性的目的是不让页面等待两个脚本下载和执行，从而异步加载页面其他内容。为此，建议异步脚本不要在加载期间修改DOM。<br><strong>注意：</strong><br>多个延迟脚本并不一定会按照顺序执行，因此最好只包含一个延迟脚本。<br><strong>浏览器支持情况：</strong></p>
+<ul>
+<li>Firefox 3.6、Safari 5 和Chrome。</li>
+<li>ie系列，async没有任何效果</li>
+<li>在chrome下，只有外联脚本，且是在body中引用的，才能生效.</li>
+<li><strong>异步执行的表现是，在DOMContentLoaded事件之后，window.loaded事件之前，所以，这个属性处理阻塞的问题是可行的</strong></li>
+</ul>
 </blockquote>
+<p>##Defer和async的区别<br>先来试个一句话解释仨，当浏览器碰到 script 脚本的时候：<br><code>&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;</code><br>没有 defer 或 async，浏览器会立即加载并执行指定的脚本，“立即”指的是在渲染该 script 标签之下的文档元素之前，也就是说不等待后续载入的文档元素，读到就加载并执行。<br><code>&lt;script async src=&quot;script.js&quot;&gt;&lt;/script&gt;</code><br>有 async，加载和渲染后续文档元素的过程将和 script.js 的加载与执行并行进行（异步）。<br><code>&lt;script defer src=&quot;myscript.js&quot;&gt;&lt;/script&gt;</code><br>有 defer，加载后续文档元素的过程将和 script.js 的加载并行进行（异步），但是 script.js 的执行要在所有元素解析完成之后，DOMContentLoaded 事件触发之前完成。</p>
+<p>然后从实用角度来说呢，首先把所有脚本都丢到 <code>&lt;/body&gt;</code> 之前是最佳实践，因为对于旧浏览器来说这是唯一的优化选择，此法可保证非脚本的其他一切元素能够以最快的速度得到加载和解析。<br>接着，我们来看一张图咯：</p>
+<img src="/2016/01/05/2-在HTML中使用JavaScrpt/deferAsync.png" alt="deferAsync.png" title="">
+<p><strong>此图告诉我们以下几个要点：</strong><br>defer 和 async 在网络读取（下载）这块儿是一样的，都是异步的（相较于 HTML 解析）它俩的差别在于脚本下载完之后何时执行，显然 defer 是最接近我们对于应用脚本加载和执行的要求的关于 defer，此图未尽之处在于它是按照加载顺序执行脚本的，这一点要善加利用async 则是一个乱序执行的主，反正对它来说脚本的加载和执行是紧紧挨着的，所以不管你声明的顺序如何，只要它加载完了就会立刻执行仔细想想，async 对于应用脚本的用处不大，因为它完全不考虑依赖（哪怕是最低级的顺序执行），不过它对于那些可以不依赖任何脚本或不被任何脚本依赖的脚本来说却是非常合适的，最典型的例子：Google Analytics。</p>
+<p>####Defer async常规表现（一些高级浏览器）</p>
+<ul>
+<li>herder<br>header中行内脚本执行顺序不受defer async影响，顺序执行，会阻塞DOMContentLoaded。<br>header中行内脚本中ajax请求不会对页面加载带来任何阻塞。<br>header中引用外部脚本，添加defer async后，浏览器表现情况不统一，async的可能先执行，所以引用外部脚本并不适合加在header中，也不适合添加defer async标示。</li>
+<li>body<br>body中图片加载会阻塞window.loaded,不会阻塞DOMContentLoaded。<br>body中行内脚本执行顺序不受defer async影响，顺序执行，阻塞DOMContentLoaded。<br>body中行内脚本ajax请求不会阻塞页面加载。<br>body中引用外部脚本，defer async表现正常，外部脚本应该加在body中，body结束标签上面。</li>
+<li>ajax<br>无论是header还是body中，行内脚本执行的ajax还是外部脚本执行的ajax，都对页面加载没有影响。</li>
+<li>总结</li>
+</ul>
+<ol>
+<li>defer执行的脚本都会在DOMContentLoaded之前就执行，defer会阻塞页面加载。</li>
+<li>async脚本都会在loaded之前执行，它会阻塞window.loaded。</li>
+<li>DOMContentLoaded在window.loaded之前执行，阻塞DOMContentLoaded也就会阻塞window.loaded</li>
+<li>document ready在DOMContentLoaded之前执行，说明document ready是监听DOMContentLoaded完成的<br>####IE</li>
+<li>IE支持defer属性,不支持async属性，从IE9及以上支持onload,支持DOMContentLoaded。</li>
+<li>IE6，7支持行内脚本defer属性， 从表现上来看IE6,7,8,9都支持行内脚本的defer，所以我们在ie6,7,8,9中观察到的现象是，行内的先执行async,再执行没加defer async标记的，defer的延迟执行了。</li>
+<li>同时我们又发现IE6,7脚本中ajax影响了页面加载，影响document ready,IE8及以上版本不受影响。</li>
+<li>到了IE8以上，表现和webkit内核浏览器基本相似了。</li>
+</ol>
+<p><strong>不是动态添加的脚本，都会阻塞页DOMContentLoaded，动态添加的脚本应该在document ready后加载，但是也会阻塞loaded</strong></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -173,7 +215,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u7B2C_u4E8C_u7AE0__u5728HTML_u4E2D_u4F7F_u7528JavaScript"><span class="toc-number">1.</span> <span class="toc-text">第二章 在HTML中使用JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1__26lt_3Bscript_26gt_3B_u5143_u7D20"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 <script>元素</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1__26lt_3Bscript_26gt_3B_u5143_u7D20"><span class="toc-number">1.</span> <span class="toc-text">2.1 <script>元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-1__u6807_u7B7E_u7684_u4F4D_u7F6E"><span class="toc-number">2.</span> <span class="toc-text">2.1.1 标签的位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-2__u5EF6_u8FDF_u811A_u672C_defer"><span class="toc-number">3.</span> <span class="toc-text">2.1.2 延迟脚本 defer</span></a></li></ol>
  
   </div>
 
