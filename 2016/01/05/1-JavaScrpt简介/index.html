@@ -17,7 +17,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/05/1-JavaScrpt简介/index.html">
 <meta property="og:site_name" content="前端之路">
 <meta property="og:description" content="第一章 JavaScript简介先简要说一下和JavaScript相关的一些背景术语，就不详细讨论JavaScript的历史了，想了解的朋友可以参考原书。">
-<meta property="og:updated_time" content="2016-01-05T06:48:08.000Z">
+<meta property="og:updated_time" content="2016-01-07T10:44:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScrpt简介">
 <meta name="twitter:description" content="第一章 JavaScript简介先简要说一下和JavaScript相关的一些背景术语，就不详细讨论JavaScript的历史了，想了解的朋友可以参考原书。">
@@ -102,16 +102,45 @@
 		
 		<h1 id="u7B2C_u4E00_u7AE0_JavaScript_u7B80_u4ECB"><a href="#u7B2C_u4E00_u7AE0_JavaScript_u7B80_u4ECB" class="headerlink" title="第一章 JavaScript简介"></a>第一章 JavaScript简介</h1><p>先简要说一下和JavaScript相关的一些背景术语，就不详细讨论JavaScript的历史了，想了解的朋友可以参考原书。<br><a id="more"></a></p>
 <ul>
-<li>ECMA：欧洲计算机制造商协会（Standard ECMA-262European Computer Manufacturers Association）</li>
-<li>TC39：ECMA第39号技术委员会（Technical Committee#39），由来自一些关注脚本语言发展的公司的程序员组成，负责制定一种通用、跨平台、供应商中立的脚本语言。</li>
-<li>ECMAScript：由ECMA制定，在ECMA-262中定义的脚本语言标准。ECMAScript只是一个脚本语言标准，你尽可以在自己的环境中取实现它，这个环境，就称为ECMAScript的宿主环境，Web浏览器可以说是ECMAScript目前最重要的宿主环境了，而不同的Web浏览器，对ECMAScript标准的支持也不尽相同。除Web浏览器，Adobe ActionScript也实现了ECMAScript。一般的宿主环境，除了实现ECMAScript标准，也会有各自的扩展，以便与环境更好的交互。</li>
+<li>ECMA：<br>欧洲计算机制造商协会（Standard ECMA-262European Computer Manufacturers Association）</li>
+<li>TC39：<br>ECMA第39号技术委员会（Technical Committee#39），由来自一些关注脚本语言发展的公司的程序员组成，负责制定一种通用、跨平台、供应商中立的脚本语言。</li>
+<li>ECMAScript：<br>由ECMA制定，在ECMA-262中定义的脚本语言标准。ECMAScript只是一个脚本语言标准，你尽可以在自己的环境中取实现它，这个环境，就称为ECMAScript的宿主环境，Web浏览器可以说是ECMAScript目前最重要的宿主环境了，而不同的Web浏览器，对ECMAScript标准的支持也不尽相同。除Web浏览器，Adobe ActionScript也实现了ECMAScript。一般的宿主环境，除了实现ECMAScript标准，也会有各自的扩展，以便与环境更好的交互。</li>
 <li>ES3、ES5、ES6：是指ECMAScript 的三个版本，最新版是ES6，已经有部分特性被浏览器支持。<a href="http://kangax.github.io/compat-table/es5/" target="_blank" rel="external">查看各个版本被各大浏览器的支持情况</a>。</li>
-<li>LiveScript、JavaScript、JScript：LiveScript是JavaScript的前身，而JScript则是微软为了防止版权冲突而给自己的脚本语言起的名称。他们除了实现了ECMAScript外，还会包括针对浏览器的扩展（BOM：浏览器对象模型）和针对XML/HTML API的扩展（DOM：文档对象模型）。<blockquote>
+<li>DOM<blockquote>
+<ul>
+<li><strong>DOM1级：</strong><br>DOM1 级由两个模块组成：DOM核心（DOM Core）和DOM HTML。其中，DOM 核心规定的是如何映射基于XML 的文档结构，以便简化对文档中任意部分的访问和操作。DOM HTML 模块则在DOM 核心的基础上加以扩展，添加了针对HTML 的对象和方法。</li>
+<li><strong>DOM2级：</strong><br>DOM2 级在原来DOM 的基础上又扩充了（DHTML 一直都支持的）鼠标和用户界面事件、范围、遍历（迭代DOM文档的方法）等细分模块，而且通过对象接口增加了对CSS（Cascading Style Sheets，层叠样式表）的支持。DOM1 级中的DOM核心模块也经过扩展开始支持XML 命名空间。</li>
+<li><strong>DOM3级：</strong></li>
+</ul>
+<ol>
+<li>引入了以统一方式加载和保存文档的方法</li>
+<li>新增了验证文档的方法</li>
+<li>DOM3 级也对DOM 核心进行了扩展，开始支持XML 1.0 规范，涉及XML Infoset、XPath和XML Base。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><strong>BOM ：</strong><blockquote>
+<ol>
+<li>弹出新浏览器窗口的功能；</li>
+<li>移动、缩放和关闭浏览器窗口的功能；</li>
+<li>提供浏览器详细信息的navigator 对象；</li>
+<li>提供浏览器所加载页面的详细信息的location 对象；</li>
+<li>提供用户显示器分辨率详细信息的screen 对象；</li>
+<li>对cookies 的支持；</li>
+<li>像XMLHttpRequest 和IE 的ActiveXObject 这样的自定义对象。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>LiveScript、JavaScript、JScript：<br>LiveScript是JavaScript的前身，而JScript则是微软为了防止版权冲突而给自己的脚本语言起的名称。他们除了实现了ECMAScript外，还会包括针对浏览器的扩展（BOM：浏览器对象模型）和针对XML/HTML API的扩展（DOM：文档对象模型）。<blockquote>
 <p>JavaScript 是一种专为网页交互设计的脚本语言，由下列三个不同的部分组成：</p>
 <blockquote>
 <p>ECMAScript：规定了以下这些内容：语法、类型、语句、关键字、保留字、操作符、对象</p>
-<p>DOM：文档对象模型（Document Object Model），DOM标准由负责制定WEB通信标准的W3C（World Web Consortium，万维网联盟）制定。DOM并非针对JavaScript的，很多别的语言也都实现了DOM。目前DOM共有三级标准（DOM1、DOM2、DOM3），有时，也将DOM标准之前称为DOM0级，现代浏览器几乎全部支持DOM2级标准，也部分支持DOM3级标准了。</p>
-<p>BOM：浏览器对象模型（Browser Object Model）。</p>
+<p>DOM：文档对象模型（Document Object Model）</p>
+<p>BOM：浏览器对象模型（Browser Object Model）</p>
 </blockquote>
 </blockquote>
 </li>
