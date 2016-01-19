@@ -81,7 +81,68 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/01/08/DOMContentLoaded/" title="DOMContentLoaded" itemprop="url">DOMContentLoaded</a>
+      <a href="/2016/01/19/webkit的预加载扫描器/" title="webkit的预加载扫描器" itemprop="url">webkit的预加载扫描器</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
+		
+  <p class="article-time">
+    <time datetime="2016-01-19T12:33:09.000Z" itemprop="datePublished"> 发表于 2016-01-19</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>在WebKit中，预加载扫描器指的是一个副解析器，当HTML主解析器被一个同步的script标签阻塞时，预加载扫描器就会启动.然后，它会马上找出接下来即将需要获取的资源(比如样式表，脚本，图片等资源)的URL，然后尽可能早的发起网络请求，而不用等到主解析器恢复运行，从而提高了整体的加载时间。那么，除了HTML文件中的依赖资源，还有样式表中的呢?幸运的是，WebKit已经有了一个叫CSS预加载扫描器的东西了。<br>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2016/01/19/webkit的预加载扫描器/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/JavaScript/">JavaScript</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/01/08/DOMContentLoaded/" title="onload vs DOMContentLoaded" itemprop="url">onload vs DOMContentLoaded</a>
   </h1>
   <p class="article-author">By
        
@@ -94,7 +155,7 @@
 </header>
     <div class="article-content">
         
-        <h1 id="onload_vs_DOMContentLoaded"><a href="#onload_vs_DOMContentLoaded" class="headerlink" title="onload vs DOMContentLoaded"></a>onload vs DOMContentLoaded</h1><ul>
+        <ul>
 <li><code>$(document).ready(function () { });</code></li>
 <li><code>$(function () { });</code></li>
 </ul>
@@ -147,7 +208,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/01/05/2-在HTML中使用JavaScrpt/" title="在HTML中使用JavaScrpt" itemprop="url">在HTML中使用JavaScrpt</a>
+      <a href="/2016/01/05/2-在HTML中使用JavaScrpt/" title="第二章 在HTML中使用JavaScrpt" itemprop="url">第二章 在HTML中使用JavaScrpt</a>
   </h1>
   <p class="article-author">By
        
@@ -160,7 +221,7 @@
 </header>
     <div class="article-content">
         
-        <h1 id="u7B2C_u4E8C_u7AE0__u5728HTML_u4E2D_u4F7F_u7528JavaScript"><a href="#u7B2C_u4E8C_u7AE0__u5728HTML_u4E2D_u4F7F_u7528JavaScript" class="headerlink" title="第二章 在HTML中使用JavaScript"></a>第二章 在HTML中使用JavaScript</h1><h2 id="2-1_script_u5143_u7D20"><a href="#2-1_script_u5143_u7D20" class="headerlink" title="2.1 script元素"></a>2.1 script元素</h2><p><code>&lt;script src=&quot;demo.js&quot;&gt;&lt;/script&gt;</code>尽管<code>&lt;script&gt;</code> 标签内没有内容，结束的 <code>&lt;/script&gt;</code> 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。<br>
+        <h2 id="script_u5143_u7D20"><a href="#script_u5143_u7D20" class="headerlink" title="script元素"></a>script元素</h2><p><code>&lt;script src=&quot;demo.js&quot;&gt;&lt;/script&gt;</code>尽管<code>&lt;script&gt;</code> 标签内没有内容，结束的 <code>&lt;/script&gt;</code> 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。<br>
         
         
         <p class="article-more-link">
@@ -208,7 +269,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/01/05/1-JavaScrpt简介/" title="JavaScrpt简介" itemprop="url">JavaScrpt简介</a>
+      <a href="/2016/01/05/1-JavaScrpt简介/" title="第一章 JavaScrpt简介" itemprop="url">第一章 JavaScrpt简介</a>
   </h1>
   <p class="article-author">By
        
@@ -221,7 +282,7 @@
 </header>
     <div class="article-content">
         
-        <h1 id="u7B2C_u4E00_u7AE0_JavaScript_u7B80_u4ECB"><a href="#u7B2C_u4E00_u7AE0_JavaScript_u7B80_u4ECB" class="headerlink" title="第一章 JavaScript简介"></a>第一章 JavaScript简介</h1><p>先简要说一下和JavaScript相关的一些背景术语，就不详细讨论JavaScript的历史了，想了解的朋友可以参考原书。<br>
+        <p>先简要说一下和JavaScript相关的一些背景术语，就不详细讨论JavaScript的历史了，想了解的朋友可以参考原书。<br>
         
         
         <p class="article-more-link">
@@ -338,7 +399,7 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>2</sup></a></li>
 		  
 		
 		  
@@ -355,7 +416,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>3</sup></a></li>
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>4</sup></a></li>
 			
 		
 			

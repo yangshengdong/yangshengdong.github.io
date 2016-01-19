@@ -4,36 +4,33 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>DOMContentLoaded | 前端之路</title>
+    <title>onload vs DOMContentLoaded | 前端之路</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="jack">
     
 
     
-    <meta name="description" content="onload vs DOMContentLoaded
-$(document).ready(function () { });
+    <meta name="description" content="$(document).ready(function () { });
 $(function () { });
 
 以上两行代码的目的和效果都一样———待DOM加载完成之后，执行传入的function函数。
 这是我们在页面初始化时经常使用的监听方案，那么他的实际的执行关系时什么样的呢？在原生js中是什么样的一种表现？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DOMContentLoaded">
+<meta property="og:title" content="onload vs DOMContentLoaded">
 <meta property="og:url" content="http://yoursite.com/2016/01/08/DOMContentLoaded/index.html">
 <meta property="og:site_name" content="前端之路">
-<meta property="og:description" content="onload vs DOMContentLoaded
-$(document).ready(function () { });
+<meta property="og:description" content="$(document).ready(function () { });
 $(function () { });
 
 以上两行代码的目的和效果都一样———待DOM加载完成之后，执行传入的function函数。
 这是我们在页面初始化时经常使用的监听方案，那么他的实际的执行关系时什么样的呢？在原生js中是什么样的一种表现？">
 <meta property="og:image" content="http://yoursite.com/2016/01/08/DOMContentLoaded/onLoadVSDomContentLoaded.png">
 <meta property="og:image" content="http://yoursite.com/2016/01/08/DOMContentLoaded/zongjie.png">
-<meta property="og:updated_time" content="2016-01-08T04:37:16.000Z">
+<meta property="og:updated_time" content="2016-01-19T12:59:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DOMContentLoaded">
-<meta name="twitter:description" content="onload vs DOMContentLoaded
-$(document).ready(function () { });
+<meta name="twitter:title" content="onload vs DOMContentLoaded">
+<meta name="twitter:description" content="$(document).ready(function () { });
 $(function () { });
 
 以上两行代码的目的和效果都一样———待DOM加载完成之后，执行传入的function函数。
@@ -97,7 +94,7 @@ $(function () { });
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/01/08/DOMContentLoaded/" title="DOMContentLoaded" itemprop="url">DOMContentLoaded</a>
+      <a href="/2016/01/08/DOMContentLoaded/" title="onload vs DOMContentLoaded" itemprop="url">onload vs DOMContentLoaded</a>
   </h1>
   <p class="article-author">By
        
@@ -113,11 +110,11 @@ $(function () { });
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#onload_vs_DOMContentLoaded"><span class="toc-number">1.</span> <span class="toc-text">onload vs DOMContentLoaded</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B9A_u4E49"><span class="toc-number">1.1.</span> <span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u517C_u5BB9_u65B9_u6848"><span class="toc-number">1.1.1.</span> <span class="toc-text">兼容方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ie8_u53CA_u4EE5_u4E0B_u517C_u5BB9_u5904_u7406_u65B9_u6848"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">ie8及以下兼容处理方案</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#doScroll__u68C0_u6D4B_u6CD5"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">doScroll 检测法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jQuery_u7684_u5B9E_u73B0"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">jQuery的实现</span></a></li></ol></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B9A_u4E49"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u517C_u5BB9_u65B9_u6848"><span class="toc-number">1.1.</span> <span class="toc-text">兼容方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ie8_u53CA_u4EE5_u4E0B_u517C_u5BB9_u5904_u7406_u65B9_u6848"><span class="toc-number">1.1.1.</span> <span class="toc-text">ie8及以下兼容处理方案</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#doScroll__u68C0_u6D4B_u6CD5"><span class="toc-number">1.1.2.</span> <span class="toc-text">doScroll 检测法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jQuery_u7684_u5B9E_u73B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">jQuery的实现</span></a></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<h1 id="onload_vs_DOMContentLoaded"><a href="#onload_vs_DOMContentLoaded" class="headerlink" title="onload vs DOMContentLoaded"></a>onload vs DOMContentLoaded</h1><ul>
+		<ul>
 <li><code>$(document).ready(function () { });</code></li>
 <li><code>$(function () { });</code></li>
 </ul>
@@ -138,9 +135,8 @@ $(function () { });
 <li>3 interactive（交互）： 正在解析响应内容</li>
 <li>4 complete（完成）： 响应内容解析完成，客户端可以用了。<br><em>complete事件和window.onload事件是同时的。</em></li>
 </ul>
-<p>这就是要监听页面的readystatechange事件，当事件为interactive或者complete时就可以开始做js的事情了。<br>document.readyState 状态<br>如果我们注册 ready 函数的时间点太晚了，页面已经加载完成之后，我们才注册自己的 ready 函数，那就用不着上面的层层检查了，直接看看当前页面的 readyState 就可以了，如果已经是 complete ，那就可以直接执行我们准备注册的 ready 函数了。不过 ChrisS 报告了一个很特别的错误情况，我们需要延迟一下执行。</p>
+<p>这就是要监听页面的readystatechange事件，当事件为interactive或者complete时就可以开始做js的事情了。<br>document.readyState 状态<br>如果我们注册 ready 函数的时间点太晚了，页面已经加载完成之后，我们才注册自己的 ready 函数，那就用不着上面的层层检查了，直接看看当前页面的 readyState 就可以了，如果已经是 complete ，那就可以直接执行我们准备注册的 ready 函数了。不过 ChrisS 报告了一个很特别的错误情况，我们需要延迟一下执行。<br>&gt;<br>setTimeout 经常被用来做网页上的定时器，允许为它指定一个毫秒数作为间隔执行的时间。当被启动的程序需要在非常短的时间内运行，我们就会给它指定一个很小的时间数，或者需要马上执行的话，我们甚至把这个毫秒数设置为0，但事实上，setTimeout有一个最小执行时间，当指定的时间小于该时间时，浏览器会用最小允许的时间作为setTimeout的时间间隔，也就是说即使我们把setTimeout的毫秒数设置为0，被调用的程序也没有马上启动。这个最小的时间间隔是多少呢？这和浏览器及操作系统有关。在John Resig的新书《Javascript忍者的秘密》一书中提到。</p>
 <blockquote>
-<p>setTimeout 经常被用来做网页上的定时器，允许为它指定一个毫秒数作为间隔执行的时间。当被启动的程序需要在非常短的时间内运行，我们就会给它指定一个很小的时间数，或者需要马上执行的话，我们甚至把这个毫秒数设置为0，但事实上，setTimeout有一个最小执行时间，当指定的时间小于该时间时，浏览器会用最小允许的时间作为setTimeout的时间间隔，也就是说即使我们把setTimeout的毫秒数设置为0，被调用的程序也没有马上启动。这个最小的时间间隔是多少呢？这和浏览器及操作系统有关。在John Resig的新书《Javascript忍者的秘密》一书中提到。</p>
 <blockquote>
 <p>Browsers all have a 10ms minimum delay on OSX and a(approximately) 15ms delay on Windows.（在苹果机上的最小时间间隔是10毫秒，在Windows系统上的最小时间间隔大约是15毫秒），另外，MDC中关于setTimeout的介绍中也提到，Firefox中定义的最小时间间隔（DOM_MIN_TIMEOUT_VALUE）是10毫秒，HTML5定义的最小时间间隔是4毫秒。</p>
 </blockquote>
@@ -150,10 +146,7 @@ $(function () { });
     // 延迟 1 毫秒之后，执行 ready 函数
     setTimeout(jQuery.ready, 1);
 }
-</code></pre><h4 id="doScroll__u68C0_u6D4B_u6CD5"><a href="#doScroll__u68C0_u6D4B_u6CD5" class="headerlink" title="doScroll 检测法"></a>doScroll 检测法</h4><p>但是当页面中带有iframe时，这个readyState状态会挂起一直等待，等待页面的iframe也加载完毕之后再处理，这个过程是我们不想要得，那就有另外一种处理方案。</p>
-<blockquote>
-<p>MSDN 关于 JScript 的一个方法有段不起眼的话，当页面 DOM 未加载完成时，调用 doScroll 方法时，会产生异常。那么我们反过来用，如果不异常，那么就是页面DOM加载完毕了！<br>Diego Perini 在 2007 年的时候，报告了一种检测 IE 是否加载完成的方式，使用 doScroll 方法调用。详细的说明见这里。<br>原理是对于 IE 在非 iframe 内时，只有不断地通过能否执行 doScroll 判断 DOM 是否加载完毕。在本例中每间隔 50 毫秒尝试去执行 doScroll，注意，由于页面没有加载完成的时候，调用 doScroll 会导致异常，所以使用了 try -catch 来捕获异常。</p>
-</blockquote>
+</code></pre><h4 id="doScroll__u68C0_u6D4B_u6CD5"><a href="#doScroll__u68C0_u6D4B_u6CD5" class="headerlink" title="doScroll 检测法"></a>doScroll 检测法</h4><p>但是当页面中带有iframe时，这个readyState状态会挂起一直等待，等待页面的iframe也加载完毕之后再处理，这个过程是我们不想要得，那就有另外一种处理方案。<br>&gt;<br>MSDN 关于 JScript 的一个方法有段不起眼的话，当页面 DOM 未加载完成时，调用 doScroll 方法时，会产生异常。那么我们反过来用，如果不异常，那么就是页面DOM加载完毕了！<br>Diego Perini 在 2007 年的时候，报告了一种检测 IE 是否加载完成的方式，使用 doScroll 方法调用。详细的说明见这里。<br>原理是对于 IE 在非 iframe 内时，只有不断地通过能否执行 doScroll 判断 DOM 是否加载完毕。在本例中每间隔 50 毫秒尝试去执行 doScroll，注意，由于页面没有加载完成的时候，调用 doScroll 会导致异常，所以使用了 try -catch 来捕获异常。</p>
 <pre><code>(function doScrollCheck() {
     if (!jQuery.isReady) {  
         try {
@@ -261,7 +254,7 @@ jQuery.extend({
     ready: function( wait ) {
         // Abort if there are pending holds or we&apos;re already ready
         // 判断页面是否加载完成并且ready方法已经执行
-        // 若传入的参数为true，则--readyWait；否则判断isReady，即ready是否正在执行 
+        // 若传入的参数为true，则--readyWait；否则判断isReady，即ready是否正在执行
         if ( wait === true ? --jQuery.readyWait : jQuery.isReady ) {
             return;
         }
@@ -290,7 +283,7 @@ jQuery.extend({
         }
     }
 });
-</code></pre><p>根据以上代码可见，最终DOMContented事件执行的，其实是jQUery.ready()这个工具函数。<br>（注意，jquery.ready()和jquery(document).raedy()不一样！！，前者是工具函数，后者是实例函数。）<br>这里是通过定义一个DOMContentLoaded函数作为桥梁来执行jquery.ready()函数的，这样做的目的就是为了及时的remove掉document的DOMContentLoaded事件的引用。<br><img src="/2016/01/08/DOMContentLoaded/zongjie.png" alt="zongjie.png" title=""><br>推荐好文:  <a href="http://www.xiabingbao.com/jquery/2015/06/27/jquery-holdready/" target="_blank" rel="external">何控制jquery的ready事件</a> </p>
+</code></pre><p>根据以上代码可见，最终DOMContented事件执行的，其实是jQUery.ready()这个工具函数。<br>（注意，jquery.ready()和jquery(document).raedy()不一样！！，前者是工具函数，后者是实例函数。）<br>这里是通过定义一个DOMContentLoaded函数作为桥梁来执行jquery.ready()函数的，这样做的目的就是为了及时的remove掉document的DOMContentLoaded事件的引用。<br><img src="/2016/01/08/DOMContentLoaded/zongjie.png" alt="zongjie.png" title=""><br>推荐好文:  <a href="http://www.xiabingbao.com/jquery/2015/06/27/jquery-holdready/" target="_blank" rel="external">何控制jquery的ready事件</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -313,7 +306,7 @@ jQuery.extend({
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/01/08/DOMContentLoaded/" data-title="DOMContentLoaded | 前端之路" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/01/08/DOMContentLoaded/" data-title="onload vs DOMContentLoaded | 前端之路" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -326,11 +319,19 @@ jQuery.extend({
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2016/01/19/webkit的预加载扫描器/" title="webkit的预加载扫描器">
+  <strong>上一篇：</strong><br/>
+  <span>
+  webkit的预加载扫描器</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2016/01/05/2-在HTML中使用JavaScrpt/"  title="在HTML中使用JavaScrpt">
+<a href="/2016/01/05/2-在HTML中使用JavaScrpt/"  title="第二章 在HTML中使用JavaScrpt">
  <strong>下一篇：</strong><br/> 
- <span>在HTML中使用JavaScrpt
+ <span>第二章 在HTML中使用JavaScrpt
 </span>
 </a>
 </div>
@@ -345,7 +346,7 @@ jQuery.extend({
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#onload_vs_DOMContentLoaded"><span class="toc-number">1.</span> <span class="toc-text">onload vs DOMContentLoaded</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B9A_u4E49"><span class="toc-number">1.1.</span> <span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u517C_u5BB9_u65B9_u6848"><span class="toc-number">1.1.1.</span> <span class="toc-text">兼容方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ie8_u53CA_u4EE5_u4E0B_u517C_u5BB9_u5904_u7406_u65B9_u6848"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">ie8及以下兼容处理方案</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#doScroll__u68C0_u6D4B_u6CD5"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">doScroll 检测法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jQuery_u7684_u5B9E_u73B0"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">jQuery的实现</span></a></li></ol></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B9A_u4E49"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u517C_u5BB9_u65B9_u6848"><span class="toc-number">1.1.</span> <span class="toc-text">兼容方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ie8_u53CA_u4EE5_u4E0B_u517C_u5BB9_u5904_u7406_u65B9_u6848"><span class="toc-number">1.1.1.</span> <span class="toc-text">ie8及以下兼容处理方案</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#doScroll__u68C0_u6D4B_u6CD5"><span class="toc-number">1.1.2.</span> <span class="toc-text">doScroll 检测法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jQuery_u7684_u5B9E_u73B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">jQuery的实现</span></a></li></ol></li></ol></li></ol>
  
   </div>
 
@@ -362,7 +363,7 @@ jQuery.extend({
 		<ul>
 		
 		  
-			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>2</sup></a></li>
 		  
 		
 		  
@@ -379,7 +380,7 @@ jQuery.extend({
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>3</sup></a></li>
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>4</sup></a></li>
 			
 		
 			
