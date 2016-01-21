@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>第一章 JavaScrpt简介 | 前端之路</title>
+    <title>ECMAScrip中的对象存取器:getter和setter | 前端之路</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="jack">
     
 
     
-    <meta name="description" content="先简要说一下和JavaScript相关的一些背景术语，就不详细讨论JavaScript的历史了，想了解的朋友可以参考原书。">
+    <meta name="description" content="显然这是一个无关IE（高级IE除外）的话题，尽管如此，有兴趣的同学还是一起来认识一下ECMAScript5标准中getter和setter的实现。在一个对象中，操作其中的属性或方法，通常运用最多的就是读（引用）和写了，譬如说o.get，这就是一个读的操作，而o.set = 1则是一个写的操作。事实上在除ie外最新主流浏览器的实现中，任何一个对象的键值都可以被getter和setter方法所取代，这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一章 JavaScrpt简介">
-<meta property="og:url" content="http://yoursite.com/2016/01/05/1-JavaScrpt简介/index.html">
+<meta property="og:title" content="ECMAScrip中的对象存取器:getter和setter">
+<meta property="og:url" content="http://yoursite.com/2016/01/21/ECMAScrip中的对象存取器-getter和setter/index.html">
 <meta property="og:site_name" content="前端之路">
-<meta property="og:description" content="先简要说一下和JavaScript相关的一些背景术语，就不详细讨论JavaScript的历史了，想了解的朋友可以参考原书。">
-<meta property="og:updated_time" content="2016-01-19T12:59:25.000Z">
+<meta property="og:description" content="显然这是一个无关IE（高级IE除外）的话题，尽管如此，有兴趣的同学还是一起来认识一下ECMAScript5标准中getter和setter的实现。在一个对象中，操作其中的属性或方法，通常运用最多的就是读（引用）和写了，譬如说o.get，这就是一个读的操作，而o.set = 1则是一个写的操作。事实上在除ie外最新主流浏览器的实现中，任何一个对象的键值都可以被getter和setter方法所取代，这">
+<meta property="og:updated_time" content="2016-01-21T09:37:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一章 JavaScrpt简介">
-<meta name="twitter:description" content="先简要说一下和JavaScript相关的一些背景术语，就不详细讨论JavaScript的历史了，想了解的朋友可以参考原书。">
+<meta name="twitter:title" content="ECMAScrip中的对象存取器:getter和setter">
+<meta name="twitter:description" content="显然这是一个无关IE（高级IE除外）的话题，尽管如此，有兴趣的同学还是一起来认识一下ECMAScript5标准中getter和setter的实现。在一个对象中，操作其中的属性或方法，通常运用最多的就是读（引用）和写了，譬如说o.get，这就是一个读的操作，而o.set = 1则是一个写的操作。事实上在除ie外最新主流浏览器的实现中，任何一个对象的键值都可以被getter和setter方法所取代，这">
 
     
     <link rel="alternative" href="/atom.xml" title="前端之路" type="application/atom+xml">
@@ -80,14 +80,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/01/05/1-JavaScrpt简介/" title="第一章 JavaScrpt简介" itemprop="url">第一章 JavaScrpt简介</a>
+      <a href="/2016/01/21/ECMAScrip中的对象存取器-getter和setter/" title="ECMAScrip中的对象存取器:getter和setter" itemprop="url">ECMAScrip中的对象存取器:getter和setter</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-05T06:24:40.000Z" itemprop="datePublished"> 发表于 2016-01-05</time>
+    <time datetime="2016-01-21T09:34:17.000Z" itemprop="datePublished"> 发表于 2016-01-21</time>
     
   </p>
 </header>
@@ -100,60 +100,38 @@
 		
 		</div>
 		
-		<p>先简要说一下和JavaScript相关的一些背景术语，就不详细讨论JavaScript的历史了，想了解的朋友可以参考原书。<br><a id="more"></a></p>
-<ul>
-<li>ECMA：<br>欧洲计算机制造商协会（Standard ECMA-262European Computer Manufacturers Association）</li>
-<li>TC39：<br>ECMA第39号技术委员会（Technical Committee#39），由来自一些关注脚本语言发展的公司的程序员组成，负责制定一种通用、跨平台、供应商中立的脚本语言。</li>
-<li>ECMAScript：<br>由ECMA制定，在ECMA-262中定义的脚本语言标准。ECMAScript只是一个脚本语言标准，你尽可以在自己的环境中取实现它，这个环境，就称为ECMAScript的宿主环境，Web浏览器可以说是ECMAScript目前最重要的宿主环境了，而不同的Web浏览器，对ECMAScript标准的支持也不尽相同。除Web浏览器，Adobe ActionScript也实现了ECMAScript。一般的宿主环境，除了实现ECMAScript标准，也会有各自的扩展，以便与环境更好的交互。</li>
-<li>ES3、ES5、ES6：是指ECMAScript 的三个版本，最新版是ES6，已经有部分特性被浏览器支持。<a href="http://kangax.github.io/compat-table/es5/" target="_blank" rel="external">查看各个版本被各大浏览器的支持情况</a>。</li>
-<li>DOM<blockquote>
-<ul>
-<li><strong>DOM1级：</strong><br>DOM1 级由两个模块组成：DOM核心（DOM Core）和DOM HTML。其中，DOM 核心规定的是如何映射基于XML 的文档结构，以便简化对文档中任意部分的访问和操作。DOM HTML 模块则在DOM 核心的基础上加以扩展，添加了针对HTML 的对象和方法。</li>
-<li><strong>DOM2级：</strong><br>DOM2 级在原来DOM 的基础上又扩充了（DHTML 一直都支持的）鼠标和用户界面事件、范围、遍历（迭代DOM文档的方法）等细分模块，而且通过对象接口增加了对CSS（Cascading Style Sheets，层叠样式表）的支持。DOM1 级中的DOM核心模块也经过扩展开始支持XML 命名空间。</li>
-<li><strong>DOM3级：</strong></li>
-</ul>
-<ol>
-<li>引入了以统一方式加载和保存文档的方法</li>
-<li>新增了验证文档的方法</li>
-<li>DOM3 级也对DOM 核心进行了扩展，开始支持XML 1.0 规范，涉及XML Infoset、XPath和XML Base。</li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><strong>BOM ：</strong><br>从根本上讲，BOM 只处理浏览器窗口和框架；但人们习惯上也把所有针对浏览器的JavaScript 扩展算作BOM的一部分。下面就是一些这样的扩展：<blockquote>
-<ol>
-<li>弹出新浏览器窗口的功能；</li>
-<li>移动、缩放和关闭浏览器窗口的功能；</li>
-<li>提供浏览器详细信息的navigator 对象；</li>
-<li>提供浏览器所加载页面的详细信息的location 对象；</li>
-<li>提供用户显示器分辨率详细信息的screen 对象；</li>
-<li>对cookies 的支持；</li>
-<li>像XMLHttpRequest 和IE 的ActiveXObject 这样的自定义对象。</li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li>LiveScript、JavaScript、JScript：<br>LiveScript是JavaScript的前身，而JScript则是微软为了防止版权冲突而给自己的脚本语言起的名称。他们除了实现了ECMAScript外，还会包括针对浏览器的扩展（BOM：浏览器对象模型）和针对XML/HTML API的扩展（DOM：文档对象模型）。<blockquote>
-<p>JavaScript 是一种专为网页交互设计的脚本语言，由下列三个不同的部分组成：</p>
-<blockquote>
-<p>ECMAScript：规定了以下这些内容：语法、类型、语句、关键字、保留字、操作符、对象</p>
-<p>DOM：文档对象模型（Document Object Model）</p>
-<p>BOM：浏览器对象模型（Browser Object Model）</p>
-</blockquote>
-</blockquote>
-</li>
-</ul>
+		<p>显然这是一个无关IE（高级IE除外）的话题，尽管如此，有兴趣的同学还是一起来认识一下ECMAScript5标准中getter和setter的实现。在一个对象中，操作其中的属性或方法，通常运用最多的就是读（引用）和写了，譬如说o.get，这就是一个读的操作，而o.set = 1则是一个写的操作。事实上在除ie外最新主流浏览器的实现中，任何一个对象的键值都可以被getter和setter方法所取代，这被称之为“存取器属性”。<br><a id="more"></a><br>毫无疑问，getter负责查询值，它不带任何参数，setter则负责设置键值，值是以参数的形式传递，在他的函数体中，一切的return都是无效的。和普通属性不同的是，存储器属性在只声明了get或set时，对于读和写是两者不可兼得的，当它只拥有了getter方法，那么它仅仅只读，同样的，当它只有setter方法，那么您读到的永远都是undefined。如何声明对象存储器属性呢？ 最快捷的途径就是利用对象字面量的语法来写了，请看下述一段代码：</p>
+<pre><code>var oo = {
+    name : &apos;贤心&apos;,
+    get sex(){
+        return &apos;man&apos;;
+    }
+};
+//显然这是不允许的，因为贤心并不希望外界去改变他是男性的事实，所以对于sex只设置了只读功能
+oo.sex = &apos;woman&apos;;//在严格模式下报错。
+console.log(oo.sex); //结果依然是man
+</code></pre><p>有意思的是，这颠覆了我们以往的理解，就是在方法定义时并未用function关键字。事实上这里的get或set，你可以理解为两种不同状态下的function：包容的一面（写），安全的一面（读），当一种整体被肢解为不同的形态，意味着我们可能不再需要在表现形式上遵循传统，所以我们并没有使用冒号将键和值分开。那么，继续上面的例子。你将如何在存储器属性的基础上变得读写兼备呢，也许下面的一段会给你带来答案：</p>
+<pre><code>var oo = {
+    name : &apos;贤心&apos;,
+    get sex(){
+        if(this.sexx){
+            return this.sexx;
+        }else{
+            return &apos;man&apos;;
+        }
+    }, set sex(val){
+        this.sexx = val;
+    }
+};
+//噢，他如此包容，乃至于人们改变他的性别，他也接受
+oo.sex = &apos;woman&apos;;
+console.log(oo.sex); //结果woman
+</code></pre><p>或许你会觉得这是多此一举的，因为我们完全可以忽视get和set，直接让sex方法具备两种权限。 但之所以我们将get和set单独拿出来，是为了更加清晰地理解ECMAScript5对javascript对象键值操作中，一个更为严谨的诠释。 当然，在IE污染的中国，新型的主流技术总是显得格格不入，在实际的项目开发中，也许你永远不会用到get和set，但谁又能保证以后不会呢……</p>
+<p>摘自：<a href="http://sentsin.com/web/20.html" target="_blank" rel="external">贤心博客</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/《JS高程3-笔记》/">《JS高程3-笔记》</a>
-</div>
 
 
   <div class="article-tags">
@@ -167,7 +145,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/01/05/1-JavaScrpt简介/" data-title="第一章 JavaScrpt简介 | 前端之路" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/01/21/ECMAScrip中的对象存取器-getter和setter/" data-title="ECMAScrip中的对象存取器:getter和setter | 前端之路" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -180,19 +158,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/01/05/2-在HTML中使用JavaScrpt/" title="第二章 在HTML中使用JavaScrpt">
-  <strong>上一篇：</strong><br/>
-  <span>
-  第二章 在HTML中使用JavaScrpt</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/01/05/hello-world/"  title="Hello World">
+<a href="/2016/01/21/严格模式/"  title="严格模式">
  <strong>下一篇：</strong><br/> 
- <span>Hello World
+ <span>严格模式
 </span>
 </a>
 </div>

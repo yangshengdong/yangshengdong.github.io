@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="前端之路">
 <meta property="og:description" content="script元素&amp;lt;script src=&amp;quot;demo.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
 <meta property="og:image" content="http://yoursite.com/2016/01/05/2-在HTML中使用JavaScrpt/deferAsync.png">
-<meta property="og:updated_time" content="2016-01-19T13:09:35.000Z">
+<meta property="og:updated_time" content="2016-01-20T01:33:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第二章 在HTML中使用JavaScrpt">
 <meta name="twitter:description" content="script元素&amp;lt;script src=&amp;quot;demo.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;尽管&amp;lt;script&amp;gt; 标签内没有内容，结束的 &amp;lt;/script&amp;gt; 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。">
@@ -97,7 +97,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#script_u5143_u7D20"><span class="toc-number">1.</span> <span class="toc-text">script元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u7B7E_u7684_u4F4D_u7F6E"><span class="toc-number">2.</span> <span class="toc-text">标签的位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5EF6_u8FDF_u811A_u672C_defer"><span class="toc-number">3.</span> <span class="toc-text">延迟脚本 defer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5F02_u6B65_u811A_u672C_async"><span class="toc-number">4.</span> <span class="toc-text">异步脚本 async</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Defer_u548Casync_u7684_u533A_u522B"><span class="toc-number">5.</span> <span class="toc-text">Defer和async的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Defer_async_u5E38_u89C4_u8868_u73B0_uFF08_u4E00_u4E9B_u9AD8_u7EA7_u6D4F_u89C8_u5668_uFF09"><span class="toc-number">5.1.</span> <span class="toc-text">Defer async常规表现（一些高级浏览器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IE"><span class="toc-number">5.2.</span> <span class="toc-text">IE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5D4C_u5165_u4EE3_u7801_u4E0E_u5916_u90E8_u6587_u4EF6"><span class="toc-number">6.</span> <span class="toc-text">嵌入代码与外部文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6587_u6863_u6A21_u5F0F__26lt_3B_21DOCTYPE_*_26gt_3B"><span class="toc-number">7.</span> <span class="toc-text">文档模式 <!DOCTYPE *></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#noscript_u6807_u7B7E"><span class="toc-number">8.</span> <span class="toc-text">noscript标签</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#script_u5143_u7D20"><span class="toc-number">1.</span> <span class="toc-text">script元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u7B7E_u7684_u4F4D_u7F6E"><span class="toc-number">2.</span> <span class="toc-text">标签的位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5EF6_u8FDF_u811A_u672C_defer"><span class="toc-number">3.</span> <span class="toc-text">延迟脚本 defer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5F02_u6B65_u811A_u672C_async"><span class="toc-number">4.</span> <span class="toc-text">异步脚本 async</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Defer_u548Casync_u7684_u533A_u522B"><span class="toc-number">5.</span> <span class="toc-text">Defer和async的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Defer_async_u5E38_u89C4_u8868_u73B0_uFF08_u4E00_u4E9B_u9AD8_u7EA7_u6D4F_u89C8_u5668_uFF09"><span class="toc-number">5.1.</span> <span class="toc-text">Defer async常规表现（一些高级浏览器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IE"><span class="toc-number">5.2.</span> <span class="toc-text">IE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5D4C_u5165_u4EE3_u7801_u4E0E_u5916_u90E8_u6587_u4EF6"><span class="toc-number">6.</span> <span class="toc-text">嵌入代码与外部文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6587_u6863_u6A21_u5F0F__26lt_3B_21DOCTYPE_*_26gt_3B"><span class="toc-number">7.</span> <span class="toc-text">文档模式 <!DOCTYPE *></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#noscript"><span class="toc-number">8.</span> <span class="toc-text">noscript</span></a></li></ol>
 		
 		</div>
 		
@@ -188,7 +188,7 @@
 <blockquote>
 <p>现在所有的HTML文档都推荐使用HTML5规定的<code>&lt;!DOCTYPE html&gt;</code></p>
 </blockquote>
-<h2 id="noscript_u6807_u7B7E"><a href="#noscript_u6807_u7B7E" class="headerlink" title="noscript标签"></a>noscript标签</h2><p>包含在<code>&lt;noscript&gt;&lt;/noscript&gt;</code>元素中的内容只有在下列情况下才会显示出来：</p>
+<h2 id="noscript"><a href="#noscript" class="headerlink" title="noscript"></a>noscript</h2><p>包含在<code>&lt;noscript&gt;&lt;/noscript&gt;</code>元素中的内容只有在下列情况下才会显示出来：</p>
 <ul>
 <li>浏览器不支持脚本；</li>
 <li>浏览器支持脚本，但脚本被禁用。</li>
@@ -255,7 +255,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#script_u5143_u7D20"><span class="toc-number">1.</span> <span class="toc-text">script元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u7B7E_u7684_u4F4D_u7F6E"><span class="toc-number">2.</span> <span class="toc-text">标签的位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5EF6_u8FDF_u811A_u672C_defer"><span class="toc-number">3.</span> <span class="toc-text">延迟脚本 defer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5F02_u6B65_u811A_u672C_async"><span class="toc-number">4.</span> <span class="toc-text">异步脚本 async</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Defer_u548Casync_u7684_u533A_u522B"><span class="toc-number">5.</span> <span class="toc-text">Defer和async的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Defer_async_u5E38_u89C4_u8868_u73B0_uFF08_u4E00_u4E9B_u9AD8_u7EA7_u6D4F_u89C8_u5668_uFF09"><span class="toc-number">5.1.</span> <span class="toc-text">Defer async常规表现（一些高级浏览器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IE"><span class="toc-number">5.2.</span> <span class="toc-text">IE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5D4C_u5165_u4EE3_u7801_u4E0E_u5916_u90E8_u6587_u4EF6"><span class="toc-number">6.</span> <span class="toc-text">嵌入代码与外部文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6587_u6863_u6A21_u5F0F__26lt_3B_21DOCTYPE_*_26gt_3B"><span class="toc-number">7.</span> <span class="toc-text">文档模式 <!DOCTYPE *></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#noscript_u6807_u7B7E"><span class="toc-number">8.</span> <span class="toc-text">noscript标签</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#script_u5143_u7D20"><span class="toc-number">1.</span> <span class="toc-text">script元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u7B7E_u7684_u4F4D_u7F6E"><span class="toc-number">2.</span> <span class="toc-text">标签的位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5EF6_u8FDF_u811A_u672C_defer"><span class="toc-number">3.</span> <span class="toc-text">延迟脚本 defer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5F02_u6B65_u811A_u672C_async"><span class="toc-number">4.</span> <span class="toc-text">异步脚本 async</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Defer_u548Casync_u7684_u533A_u522B"><span class="toc-number">5.</span> <span class="toc-text">Defer和async的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Defer_async_u5E38_u89C4_u8868_u73B0_uFF08_u4E00_u4E9B_u9AD8_u7EA7_u6D4F_u89C8_u5668_uFF09"><span class="toc-number">5.1.</span> <span class="toc-text">Defer async常规表现（一些高级浏览器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IE"><span class="toc-number">5.2.</span> <span class="toc-text">IE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5D4C_u5165_u4EE3_u7801_u4E0E_u5916_u90E8_u6587_u4EF6"><span class="toc-number">6.</span> <span class="toc-text">嵌入代码与外部文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6587_u6863_u6A21_u5F0F__26lt_3B_21DOCTYPE_*_26gt_3B"><span class="toc-number">7.</span> <span class="toc-text">文档模式 <!DOCTYPE *></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#noscript"><span class="toc-number">8.</span> <span class="toc-text">noscript</span></a></li></ol>
  
   </div>
 
@@ -272,11 +272,11 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>2</sup></a></li>
+			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>3</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/《JS高程3-笔记》/" title="《JS高程3-笔记》">《JS高程3-笔记》<sup>2</sup></a></li>
+			<li><a href="/categories/《JS高程3-笔记》/" title="《JS高程3-笔记》">《JS高程3-笔记》<sup>3</sup></a></li>
 		  
 		
 		</ul>
@@ -289,11 +289,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>4</sup></a></li>
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>1</sup></a></li>
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>2</sup></a></li>
 			
 		
 		</ul>
