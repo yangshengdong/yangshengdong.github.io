@@ -17,7 +17,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/20/3-第三章基本概念/index.html">
 <meta property="og:site_name" content="前端之路">
 <meta property="og:description" content="语法区分大小写ECMAScript 中的一切（变量、函数名和操作符）都区分大小写。">
-<meta property="og:updated_time" content="2016-01-21T10:44:21.000Z">
+<meta property="og:updated_time" content="2016-01-25T07:01:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第三章 基本概念">
 <meta name="twitter:description" content="语法区分大小写ECMAScript 中的一切（变量、函数名和操作符）都区分大小写。">
@@ -96,7 +96,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BED_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u533A_u5206_u5927_u5C0F_u5199"><span class="toc-number">1.1.</span> <span class="toc-text">区分大小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u793A_u7B26"><span class="toc-number">1.2.</span> <span class="toc-text">标示符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E25_u683C_u6A21_u5F0F__u201Cuse_strict_u201D_3B"><span class="toc-number">1.3.</span> <span class="toc-text">严格模式 “use strict”;</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BED_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u533A_u5206_u5927_u5C0F_u5199"><span class="toc-number">1.1.</span> <span class="toc-text">区分大小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u793A_u7B26"><span class="toc-number">1.2.</span> <span class="toc-text">标示符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E25_u683C_u6A21_u5F0F__26quot_3Buse_strict_3B_26quot_3B"><span class="toc-number">1.3.</span> <span class="toc-text">严格模式 "use strict;"</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BED_u53E5"><span class="toc-number">1.4.</span> <span class="toc-text">语句</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5173_u952E_u5B57_u548C_u4FDD_u7559_u5B57"><span class="toc-number">2.</span> <span class="toc-text">关键字和保留字</span></a></li></ol>
 		
 		</div>
 		
@@ -106,7 +106,24 @@
 <li>第一个字符必须是一个字母、下划线<code>_</code>或一个美元符号<code>$</code></li>
 <li>其他字符可以是字母、下划线、美元符号或数字。标识符中的字母包含扩展的ASCll或Unicode字母字符(如À和Æ);</li>
 </ul>
-<h2 id="u4E25_u683C_u6A21_u5F0F__u201Cuse_strict_u201D_3B"><a href="#u4E25_u683C_u6A21_u5F0F__u201Cuse_strict_u201D_3B" class="headerlink" title="严格模式 “use strict”;"></a>严格模式 “use strict”;</h2><p><a href="http://www.yangshengdonghome.com/2016/01/21/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/" target="_blank" rel="external">严格模式</a>;</p>
+<h2 id="u4E25_u683C_u6A21_u5F0F__26quot_3Buse_strict_3B_26quot_3B"><a href="#u4E25_u683C_u6A21_u5F0F__26quot_3Buse_strict_3B_26quot_3B" class="headerlink" title="严格模式 &quot;use strict;&quot;"></a>严格模式 <code>&quot;use strict;&quot;</code></h2><p><a href="http://www.yangshengdonghome.com/2016/01/21/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/" target="_blank" rel="external">严格模式</a></p>
+<h2 id="u8BED_u53E5"><a href="#u8BED_u53E5" class="headerlink" title="语句"></a>语句</h2><ul>
+<li>一个语句由一个或多个表达式、关键字或运算符（符号）组成。通常，在一个行上书写一个语句，但可在两个行或多个行上书写一个语句。此外，在同一个行上书写两个或多个语句，用分号分隔。通常，每个新行都开始一个新语句。最好是显式终止您的语句。可使用分号 (;) 做到这一点，分号是 JavaScript 语句的终止字符。</li>
+<li>由括号 ({}) 包围的一组 JavaScript 语句称为一个块。组织在一个块中的语句通常可以视为一个语句。</li>
+</ul>
+<h1 id="u5173_u952E_u5B57_u548C_u4FDD_u7559_u5B57"><a href="#u5173_u952E_u5B57_u548C_u4FDD_u7559_u5B57" class="headerlink" title="关键字和保留字"></a>关键字和保留字</h1><p>按照规则，关键字也是语言保留的，不能用作标识符。</p>
+<ul>
+<li><p>关键字：真正意义上的保留字。</p>
+<p>  if分支语句：if, else<br>  switch分支语句：switch, case, default, break<br>  循环语句：do, while, for, continue<br>  异常处理语句：try, catch, finally, throw<br>  获取类型：typeof, instanceof<br>  布尔值：true, false, null<br>  函数相关：var, void, function, return<br>  其他：in, this, with, new, delete</p>
+</li>
+<li><p>保留字：结合java、C++等面向对象语言的思路，将来有可能新加入的关键字。</p>
+<p>  基本数据类型：byte, char, boolean, int, short, long, float, double, <span style="color:green;">enum</span><br>  继承：<span style="color:red;">implements</span>, <span style="color:green;">extends</span>, <span style="color:green;">super</span><br>  类与接口：<span style="color:green;">class</span>, <span style="color:red;">interface</span><br>  用来修饰函数的关键字：abstract, native, <span style="color:red;">static</span>, final, <span style="color:green;">const</span>, volatile, synchronized<br>  导入导出：<span style="color:green;">export</span>, <span style="color:green;">import</span><br>  访问权限：<span style="color:red;">private</span>, <span style="color:red;">protected</span>, <span style="color:red;">public</span><br>  其他：goto, <span style="color:red;">package</span>, throws, transient, debugger, <span style="color:red;">let</span>,  <span style="color:red;">yield</span><br>  <span style="color:#ddd;">注意：红色字体为第5版严格模式下做的限制</span><br>  <span style="color:#ddd;">注意：第5版把在非严格模式下运行时的保留字减少到绿色字体这几个。但是为了最大的兼容性还是都不要使用了吧。</span></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>顺便整理下javascript语言中提供的有用的常用的变量和函数。</strong></p>
+<p>数据类型：Number, Boolean, String, undefined, Object, Array, Function, Date, Math, RegExp, Error<br>错误类型：EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError<br>编码：decodeURI, decodeURIComponent, encodeURI<br>转义：escape, unescape<br>类型转换：parentInt, parentFloat<br>特殊值及判断：isFinite, isNaN, NaN, Infinity<br>其他：arguments, eval<br>最后注意：我们常用的函数alert()不属于上面的三类。</p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -169,7 +186,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BED_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u533A_u5206_u5927_u5C0F_u5199"><span class="toc-number">1.1.</span> <span class="toc-text">区分大小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u793A_u7B26"><span class="toc-number">1.2.</span> <span class="toc-text">标示符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E25_u683C_u6A21_u5F0F__u201Cuse_strict_u201D_3B"><span class="toc-number">1.3.</span> <span class="toc-text">严格模式 “use strict”;</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BED_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u533A_u5206_u5927_u5C0F_u5199"><span class="toc-number">1.1.</span> <span class="toc-text">区分大小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u793A_u7B26"><span class="toc-number">1.2.</span> <span class="toc-text">标示符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E25_u683C_u6A21_u5F0F__26quot_3Buse_strict_3B_26quot_3B"><span class="toc-number">1.3.</span> <span class="toc-text">严格模式 "use strict;"</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BED_u53E5"><span class="toc-number">1.4.</span> <span class="toc-text">语句</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5173_u952E_u5B57_u548C_u4FDD_u7559_u5B57"><span class="toc-number">2.</span> <span class="toc-text">关键字和保留字</span></a></li></ol>
  
   </div>
 
