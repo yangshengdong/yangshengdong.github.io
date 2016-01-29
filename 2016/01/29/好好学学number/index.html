@@ -4,22 +4,34 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>前端之路</title>
+    <title>好好学学number! | 前端之路</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="jack">
     
 
     
-    <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="前端之路">
-<meta property="og:url" content="http://yoursite.com/index.html">
+    <meta name="description" content="Number类型JavaScript内部，所有数字都是以64位浮点数形式储存，即使整数也是如此。所以，1与1.0是相等的，而且1加上1.0得到的还是一个整数，不会像有些语言那样变成小数。
+1 === 1.0 // true
+1 + 1.0 // 2
+也就是说，在JavaScript语言的底层，根本没有整数，所有数字都是小数（64位浮点数）。容易造成混淆的是，某些运算只有整数才能完成，此时JavaS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="好好学学number!">
+<meta property="og:url" content="http://yoursite.com/2016/01/29/好好学学number/index.html">
 <meta property="og:site_name" content="前端之路">
-<meta property="og:description">
+<meta property="og:description" content="Number类型JavaScript内部，所有数字都是以64位浮点数形式储存，即使整数也是如此。所以，1与1.0是相等的，而且1加上1.0得到的还是一个整数，不会像有些语言那样变成小数。
+1 === 1.0 // true
+1 + 1.0 // 2
+也就是说，在JavaScript语言的底层，根本没有整数，所有数字都是小数（64位浮点数）。容易造成混淆的是，某些运算只有整数才能完成，此时JavaS">
+<meta property="og:image" content="http://yoursite.com/2016/01/29/好好学学number/number2.png">
+<meta property="og:image" content="http://yoursite.com/2016/01/29/好好学学number/number.png">
+<meta property="og:updated_time" content="2016-01-29T05:35:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端之路">
-<meta name="twitter:description">
+<meta name="twitter:title" content="好好学学number!">
+<meta name="twitter:description" content="Number类型JavaScript内部，所有数字都是以64位浮点数形式储存，即使整数也是如此。所以，1与1.0是相等的，而且1加上1.0得到的还是一个整数，不会像有些语言那样变成小数。
+1 === 1.0 // true
+1 + 1.0 // 2
+也就是说，在JavaScript语言的底层，根本没有整数，所有数字都是小数（64位浮点数）。容易造成混淆的是，某些运算只有整数才能完成，此时JavaS">
 
     
     <link rel="alternative" href="/atom.xml" title="前端之路" type="application/atom+xml">
@@ -73,73 +85,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/29/void-0/" title="javascript:void(0);到底是什么鬼?" itemprop="url">javascript:void(0);到底是什么鬼?</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-29T07:03:57.000Z" itemprop="datePublished"> 发表于 2016-01-29</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="u7591_u95EE_uFF1F"><a href="#u7591_u95EE_uFF1F" class="headerlink" title="疑问？"></a>疑问？</h2><p>我们经常看见<code>&lt;a href=&quot;javascript:void(0);&quot;&gt;超链接&lt;/a&gt;</code>的<code>href</code>里填写<code>javascript:void(0);</code>，取消点击跳转，可是为啥这么搞？<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/01/29/void-0/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-
-  <div class="article-tags">
+      <div id="main" class="post" itemscope itemprop="blogPost">
   
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2016/01/29/好好学学number/" title="好好学学number!" itemprop="url">好好学学number!</a>
@@ -153,9 +102,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h1 id="Number_u7C7B_u578B"><a href="#Number_u7C7B_u578B" class="headerlink" title="Number类型"></a>Number类型</h1><p>JavaScript内部，所有数字都是以64位浮点数形式储存，即使整数也是如此。所以，1与1.0是相等的，而且1加上1.0得到的还是一个整数，不会像有些语言那样变成小数。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Number_u7C7B_u578B"><span class="toc-number">1.</span> <span class="toc-text">Number类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u6574_u6570"><span class="toc-number">1.1.</span> <span class="toc-text">整数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6D6E_u70B9_u503C"><span class="toc-number">1.2.</span> <span class="toc-text">浮点值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NaN"><span class="toc-number">1.3.</span> <span class="toc-text">NaN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#+0__u548C_-0"><span class="toc-number">1.4.</span> <span class="toc-text">+0 和 -0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u4EA7_u751F_u539F_u56E0"><span class="toc-number">1.4.1.</span> <span class="toc-text">产生原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u53C2_u4E0E_u8FD0_u7B97"><span class="toc-number">1.4.2.</span> <span class="toc-text">参与运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u53C2_u4E0EMath_u5BF9_u8C61_u7684_u65B9_u6CD5"><span class="toc-number">1.4.3.</span> <span class="toc-text">参与Math对象的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u533A_u5206_u8FD9_u4E24_u4E2A_u96F6"><span class="toc-number">1.4.4.</span> <span class="toc-text">区分这两个零</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="Number_u7C7B_u578B"><a href="#Number_u7C7B_u578B" class="headerlink" title="Number类型"></a>Number类型</h1><p>JavaScript内部，所有数字都是以64位浮点数形式储存，即使整数也是如此。所以，1与1.0是相等的，而且1加上1.0得到的还是一个整数，不会像有些语言那样变成小数。</p>
 <pre><code>1 === 1.0 // true
 1 + 1.0 // 2
 </code></pre><p>也就是说，在JavaScript语言的底层，根本没有整数，所有数字都是小数（64位浮点数）。容易造成混淆的是，某些运算只有整数才能完成，此时JavaScript会自动把64位浮点数，转成32位整数，然后再进行运算。</p>
@@ -276,585 +232,61 @@ Math.atan2(-0, -0)  // -π(-3.141592653589793)
 <blockquote>
 <p><a href="http://www.cnblogs.com/ziyunfei/archive/2012/12/10/2777099.html" target="_blank" rel="external">紫云飞</a><br><a href="http://javascript.ruanyifeng.com/grammar/number.html" target="_blank" rel="external">阮一峰</a></p>
 </blockquote>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/29/好好学学undefined！/" title="好好学学undefined！" itemprop="url">好好学学undefined！</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-29T01:48:56.000Z" itemprop="datePublished"> 发表于 2016-01-29</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="undefined_u7C7B_u578B"><a href="#undefined_u7C7B_u578B" class="headerlink" title="undefined类型"></a>undefined类型</h1><p>undefined类型只有一个值，即特殊的undefined，我们称之为<code>字面值undefined</code>，undefined意为<code>未定义</code>。</p>
-<p><code>字面值undefined</code>是全局Global对象（window）的一个特殊属性，其值是未定义的。但 typeof window.undefined 返回”undefined” 。</p>
-<p>我们可以通过下面的例子来验证undefined是否为全局Global对象（window）的属性:</p>
-<pre><code>alert(&apos;undefined&apos; in window);//输出：true   
-var anObj = {};   
-alert(&apos;undefined&apos; in anObj); //输出：false 
-从中可以看出，undefined是window对象的一个属性，但却不是anObj对象的一个属性。
-</code></pre><h2 id="u5B57_u9762_u503Cundefined_u7684_u4EA7_u751F"><a href="#u5B57_u9762_u503Cundefined_u7684_u4EA7_u751F" class="headerlink" title="字面值undefined的产生"></a><code>字面值undefined</code>的产生</h2><p><code>字面值undefined</code>产生的原因有5种：</p>
-<pre><code>* 访问对象不存在的属性或方法
-* 声明了变量但从未赋值
-* 调用函数时，应该提供的参数没有提供，该参数等于undefined。
-* 方法没有返回值，默认返回undefined
-* 访问越界的数组。
-* void(expression) 形式的表达式。
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> v1,obj = &#123;&#125;;      </span><br><span class="line">  </span><br><span class="line"><span class="built_in">console</span>.log(v1); <span class="comment">//`字面值undefined`    </span></span><br><span class="line"><span class="built_in">console</span>.log(obj.get); <span class="comment">//`字面值undefined`</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> v1; <span class="comment">// "undefined"    </span></span><br><span class="line"><span class="keyword">typeof</span> v2; <span class="comment">// 对未声明的变量使用typeof 也会输出 "undefined"。     </span></span><br><span class="line"><span class="keyword">typeof</span> obj.get; <span class="comment">// "undefined"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> message1 = <span class="literal">undefined</span>;  <span class="comment">//显示的设置为undefined</span></span><br><span class="line"><span class="keyword">typeof</span> message1 <span class="comment">//"undefined"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;&#125;; </span><br><span class="line"><span class="built_in">console</span>.log(test()); <span class="comment">//`字面值undefined`</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = []; </span><br><span class="line"><span class="built_in">console</span>.log(arr[<span class="number">8</span>]) <span class="comment">//`字面值undefined`</span></span><br></pre></td></tr></table></figure>
-</code></pre><p><span style="color: red;">当我们在程序中使用<code>字面值undefined</code>时，实际上使用的是window对象的undefined属性，同样，当我们定义一个变量但未赋予其初始值，例如：<code>var aValue;</code>这时，JavaScript在预编译时会将其初始值设置为对window.undefined属性的引用，于是，当我们将一个变量或值与undefined比较时，实际上是与window对象的undefined属性比较。这个比较过程中，JavaScript会搜索window对象名叫”undefined”的属性，然后再比较两个操作数的引用指针是否相同。</span></p>
-<hr>
-<p>您可以通过将变量与<code>字面值undefined</code>进行比较确定变量是否存在，您也可以通过将变量的类型与字符串“undefined”进行比较确定其类型是否为 undefined类型。<br>以下示例演示了如何确定已声明的变量的 x：</p>
-<pre><code>var x;
-
-// This method works.
-if (x == undefined) { //这种方式只能对已经声明的变量使用，对未声明的变量使用会报错。
-    document.write(&quot;comparing x to undefined &lt;br/&gt;&quot;);
-}
-
-// This method doesn&apos;t work - you must check for the string &quot;undefined&quot;.
-if (typeof(x) == undefined) {//未执行，因为typeof 方法返回的是字符串。
-    document.write(&quot;comparing the type of x to undefined &lt;br/&gt;&quot;);
-}
-// This method does work. 
-if (typeof(x) == &quot;undefined&quot;) {
-    document.write(&quot;comparing the type of x to the string &apos;undefined&apos;&quot;);
-}
-
-// Output: 
-// comparing x to undefined 
-// comparing the type of x to the string &apos;undefined&apos;
-</code></pre><h2 id="u63D0_u9AD8_u8BBF_u95EE_u5B57_u9762_u503Cundefined_u7684_u6027_u80FD_uFF1A"><a href="#u63D0_u9AD8_u8BBF_u95EE_u5B57_u9762_u503Cundefined_u7684_u6027_u80FD_uFF1A" class="headerlink" title="提高访问字面值undefined的性能："></a>提高访问<code>字面值undefined</code>的性能：</h2><p>由于window对象的属性值是非常多的，在每一次与<code>字面值undefined</code>的比较中，搜索window对象的undefined属性都会花费时间。在需要频繁与undefined进行比较的函数中，这可能会是一个性能问题点。因此，在这种情况下，我们可以自行定义一个局部的undefined变量，来加快对undefined的比较速度。例如：</p>
-<pre><code>function anyFunc() {
-    var undefined; //自定义局部undefined变量
-    if (x == undefined){} //作用域上的引用比较
-    while (y != undefined){} //作用域上的引用比较
-};
-</code></pre><p>其中，定义undefined局部变量时，其初始值会是对window.undefined属性值的引用。新定义的局部undefined变量存在与该函数的作用域上。<br>在随后的比较操作中，JavaScript代码的书写方式没有任何的改变，但比较速度却很快。因为作用域上的变量数量会远远少于window对象的属性，搜索变量的速度会极大提高。<br>这就是许多前端JS框架为什么常常要自己定义一个局部undefined变量的原因!!!<br>比如jQuery 源码：</p>
-<pre><code>(function( window, undefined ) {
-    /*
-    * 
-    * code
-    * 
-    * */
-})( window );
-</code></pre>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-
-  <div class="article-tags">
   
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/jQuery/">jQuery</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/27/如何学习javascript-转帖/" title="如何学习javascript(转帖)" itemprop="url">如何学习javascript(转帖)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-27T02:24:34.000Z" itemprop="datePublished"> 发表于 2016-01-27</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="u9996_u5148_u8BF4_u660E"><a href="#u9996_u5148_u8BF4_u660E" class="headerlink" title="首先说明"></a>首先说明</h1><p>首先要说明的是，咱现在不是高手，最多还是一个半桶水，算是入了JS的门。 谈不上经验，都是一些教训。这个时候有人要说，“靠，你丫半桶水，凭啥教我们”。您先别急着骂，先听我说。你叫一个大学生去教小学数学，不见得比一个初中生教得好。因为大学生早已经过了那个阶段，都忘记自己怎么走过来的了。而对于初中生，刚好走过那个阶段，对自己怎么走过来的还记忆犹新，或者还有一些自己的总结。比如，很多高手觉得那本犀牛书入门很好，他们觉得太简单了，但以我的经验来看，它不是入门的最好选择。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/01/27/如何学习javascript-转帖/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/21/ECMAScrip中的对象存取器-getter和setter/" title="ECMAScrip中的对象存取器:getter和setter" itemprop="url">ECMAScrip中的对象存取器:getter和setter</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-21T09:34:17.000Z" itemprop="datePublished"> 发表于 2016-01-21</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>显然这是一个无关IE（高级IE除外）的话题，尽管如此，有兴趣的同学还是一起来认识一下ECMAScript5标准中getter和setter的实现。在一个对象中，操作其中的属性或方法，通常运用最多的就是读（引用）和写了，譬如说o.get，这就是一个读的操作，而o.set = 1则是一个写的操作。事实上在除ie外最新主流浏览器的实现中，任何一个对象的键值都可以被getter和setter方法所取代，这被称之为“存取器属性”。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/01/21/ECMAScrip中的对象存取器-getter和setter/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a>
-  </div>
-
 </div>
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://yoursite.com/2016/01/29/好好学学number/" data-title="好好学学number! | 前端之路" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/21/严格模式/" title="严格模式" itemprop="url">严格模式</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-21T05:55:51.000Z" itemprop="datePublished"> 发表于 2016-01-21</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="u6982_u8FF0"><a href="#u6982_u8FF0" class="headerlink" title="概述"></a>概述</h1><p>ECMAScript 5 的严格模式是JavaScript中的一种限制性更强的变种方式。严格模式不是一个子集：它在语义上与正常代码有着明显的差异。不支持严格模式的浏览器与同支持严格模式的浏览器行为上也不一样， 所以不要在未经严格模式特性测试情况下使用严格模式。严格模式可以与非严格模式共存，所以脚本可以逐渐的选择性加入严格模式。<br>严格模式在语义上与正常的JavaScript有一些不同。</p>
-<ul>
-<li>首先，严格模式会将JavaScript陷阱直接变成明显的错误。</li>
-<li>其次，严格模式修正了一些引擎难以优化的错误：同样的代码有些时候严格模式会比非严格模式下更快。</li>
-<li>第三，严格模式禁用了一些有可能在未来版本中定义的语法。
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/01/21/严格模式/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/jQuery/">jQuery</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/20/3-第三章基本概念/" title="第三章 基本概念" itemprop="url">第三章 基本概念</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-20T01:38:23.000Z" itemprop="datePublished"> 发表于 2016-01-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="u8BED_u6CD5"><a href="#u8BED_u6CD5" class="headerlink" title="语法"></a>语法</h1><h2 id="u533A_u5206_u5927_u5C0F_u5199"><a href="#u533A_u5206_u5927_u5C0F_u5199" class="headerlink" title="区分大小写"></a>区分大小写</h2><p>ECMAScript 中的一切（变量、函数名和操作符）都区分大小写。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/01/20/3-第三章基本概念/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/《JS高程3-笔记》/">《JS高程3-笔记》</a>
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/01/29/void-0/" title="javascript:void(0);到底是什么鬼?">
+  <strong>上一篇：</strong><br/>
+  <span>
+  javascript:void(0);到底是什么鬼?</span>
+</a>
 </div>
 
 
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a>
-  </div>
-
+<div class="next">
+<a href="/2016/01/29/好好学学undefined！/"  title="好好学学undefined！">
+ <strong>下一篇：</strong><br/> 
+ <span>好好学学undefined！
+</span>
+</a>
 </div>
 
+</nav>
 
-
-
-<div class="comments-count">
 	
-</div>
 
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/19/webkit的预加载扫描器/" title="webkit的预加载扫描器" itemprop="url">webkit的预加载扫描器</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-19T12:33:09.000Z" itemprop="datePublished"> 发表于 2016-01-19</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>在WebKit中，预加载扫描器指的是一个副解析器，当HTML主解析器被一个同步的script标签阻塞时，预加载扫描器就会启动.然后，它会马上找出接下来即将需要获取的资源(比如样式表，脚本，图片等资源)的URL，然后尽可能早的发起网络请求，而不用等到主解析器恢复运行，从而提高了整体的加载时间。那么，除了HTML文件中的依赖资源，还有样式表中的呢?幸运的是，WebKit已经有了一个叫CSS预加载扫描器的东西了。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/01/19/webkit的预加载扫描器/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/08/DOMContentLoaded/" title="onload vs DOMContentLoaded" itemprop="url">onload vs DOMContentLoaded</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-08T02:27:11.000Z" itemprop="datePublished"> 发表于 2016-01-08</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <ul>
-<li><code>$(document).ready(function () { });</code></li>
-<li><code>$(function () { });</code></li>
-</ul>
-<p>以上两行代码的目的和效果都一样———待DOM加载完成之后，执行传入的function函数。</p>
-<p>这是我们在页面初始化时经常使用的监听方案，那么他的实际的执行关系时什么样的呢？<br>在原生js中是什么样的一种表现？<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/01/08/DOMContentLoaded/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/jQuery/">jQuery</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/05/2-在HTML中使用JavaScrpt/" title="第二章 在HTML中使用JavaScrpt" itemprop="url">第二章 在HTML中使用JavaScrpt</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-05T06:25:13.000Z" itemprop="datePublished"> 发表于 2016-01-05</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="script_u5143_u7D20"><a href="#script_u5143_u7D20" class="headerlink" title="script元素"></a>script元素</h2><p><code>&lt;script src=&quot;demo.js&quot;&gt;&lt;/script&gt;</code>尽管<code>&lt;script&gt;</code> 标签内没有内容，结束的 <code>&lt;/script&gt;</code> 标签也是必需的。外部文件一般扩展名为.js，但这不是强制的，不写.js扩展名一样可以运行。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/01/05/2-在HTML中使用JavaScrpt/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/《JS高程3-笔记》/">《JS高程3-笔记》</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-  <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
-  </nav>
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Number_u7C7B_u578B"><span class="toc-number">1.</span> <span class="toc-text">Number类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u6574_u6570"><span class="toc-number">1.1.</span> <span class="toc-text">整数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6D6E_u70B9_u503C"><span class="toc-number">1.2.</span> <span class="toc-text">浮点值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NaN"><span class="toc-number">1.3.</span> <span class="toc-text">NaN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#+0__u548C_-0"><span class="toc-number">1.4.</span> <span class="toc-text">+0 和 -0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u4EA7_u751F_u539F_u56E0"><span class="toc-number">1.4.1.</span> <span class="toc-text">产生原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u53C2_u4E0E_u8FD0_u7B97"><span class="toc-number">1.4.2.</span> <span class="toc-text">参与运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u53C2_u4E0EMath_u5BF9_u8C61_u7684_u65B9_u6CD5"><span class="toc-number">1.4.3.</span> <span class="toc-text">参与Math对象的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u533A_u5206_u8FD9_u4E24_u4E2A_u96F6"><span class="toc-number">1.4.4.</span> <span class="toc-text">区分这两个零</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -1015,12 +447,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -1091,4 +600,4 @@ var _hmt = _hmt || [];
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
