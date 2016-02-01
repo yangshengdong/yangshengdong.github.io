@@ -17,7 +17,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/20/3-第三章基本概念/index.html">
 <meta property="og:site_name" content="前端之路">
 <meta property="og:description" content="语法区分大小写ECMAScript 中的一切（变量、函数名和操作符）都区分大小写。">
-<meta property="og:updated_time" content="2016-01-29T11:05:03.000Z">
+<meta property="og:updated_time" content="2016-02-01T07:42:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第三章 基本概念">
 <meta name="twitter:description" content="语法区分大小写ECMAScript 中的一切（变量、函数名和操作符）都区分大小写。">
@@ -96,7 +96,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BED_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u533A_u5206_u5927_u5C0F_u5199"><span class="toc-number">1.1.</span> <span class="toc-text">区分大小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u793A_u7B26"><span class="toc-number">1.2.</span> <span class="toc-text">标示符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E25_u683C_u6A21_u5F0F__26quot_3Buse_strict_3B_26quot_3B"><span class="toc-number">1.3.</span> <span class="toc-text">严格模式 "use strict;"</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BED_u53E5"><span class="toc-number">1.4.</span> <span class="toc-text">语句</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5173_u952E_u5B57_u548C_u4FDD_u7559_u5B57"><span class="toc-number">2.</span> <span class="toc-text">关键字和保留字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u53D8_u91CF"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u58F0_u660E_u53D8_u91CF"><span class="toc-number">3.1.</span> <span class="toc-text">声明变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6570_u636E_u7C7B_u578B"><span class="toc-number">3.2.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined_u7C7B_u578B"><span class="toc-number">3.2.1.</span> <span class="toc-text">undefined类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null_u7C7B_u578B"><span class="toc-number">3.2.2.</span> <span class="toc-text">null类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean_u7C7B_u578B"><span class="toc-number">3.2.3.</span> <span class="toc-text">Boolean类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number_u7C7B_u578B"><span class="toc-number">3.2.4.</span> <span class="toc-text">Number类型</span></a></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BED_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u533A_u5206_u5927_u5C0F_u5199"><span class="toc-number">1.1.</span> <span class="toc-text">区分大小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u793A_u7B26"><span class="toc-number">1.2.</span> <span class="toc-text">标示符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E25_u683C_u6A21_u5F0F__26quot_3Buse_strict_3B_26quot_3B"><span class="toc-number">1.3.</span> <span class="toc-text">严格模式 "use strict;"</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BED_u53E5"><span class="toc-number">1.4.</span> <span class="toc-text">语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u8BED_u53E5_u548C_u8868_u8FBE_u5F0F_u7684_u533A_u522B"><span class="toc-number">1.4.1.</span> <span class="toc-text">语句和表达式的区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5173_u952E_u5B57_u548C_u4FDD_u7559_u5B57"><span class="toc-number">2.</span> <span class="toc-text">关键字和保留字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u53D8_u91CF"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u58F0_u660E_u53D8_u91CF"><span class="toc-number">3.1.</span> <span class="toc-text">声明变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6570_u636E_u7C7B_u578B"><span class="toc-number">3.2.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined_u7C7B_u578B"><span class="toc-number">3.2.1.</span> <span class="toc-text">undefined类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null_u7C7B_u578B"><span class="toc-number">3.2.2.</span> <span class="toc-text">null类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean_u7C7B_u578B"><span class="toc-number">3.2.3.</span> <span class="toc-text">Boolean类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number_u7C7B_u578B"><span class="toc-number">3.2.4.</span> <span class="toc-text">Number类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String_u7C7B_u578B"><span class="toc-number">3.2.5.</span> <span class="toc-text">String类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7C7B_u578B_u68C0_u9A8C"><span class="toc-number">3.3.</span> <span class="toc-text">类型检验</span></a></li></ol></li></ol>
 		
 		</div>
 		
@@ -110,12 +110,11 @@
 <h2 id="u8BED_u53E5"><a href="#u8BED_u53E5" class="headerlink" title="语句"></a>语句</h2><ul>
 <li>一个语句由一个或多个表达式、关键字或运算符（符号）组成。通常，在一个行上书写一个语句，但可在两个行或多个行上书写一个语句。此外，在同一个行上书写两个或多个语句，用分号分隔。通常，每个新行都开始一个新语句。最好是显式终止您的语句。可使用分号 (;) 做到这一点，分号是 JavaScript 语句的终止字符。</li>
 <li><p>由括号 ({}) 包围的一组 JavaScript 语句称为一个块。组织在一个块中的语句通常可以视为一个语句，比如<code>var a = function (){};</code>和对象字面量(<code>a = {};</code>)，这两个结尾的也需要加分号，其他的大括号情况(for循环、ifelse判断)，可以不加分号。</p>
-<pre><code>abc={}bbc=function(){}//报错 Uncaught SyntaxError: Unexpected identifier
-abc=function(){}bbc=function(){}//报错 Uncaught SyntaxError: Unexpected identifier
-if(a==1){}bbc=function(){}// 正常
-for(var a = 1;a&lt;10;a++){}bbc=function(){}//正常
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">abc=&#123;&#125;bbc=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;<span class="comment">//报错 Uncaught SyntaxError: Unexpected identifier</span></span><br><span class="line">abc=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;bbc=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;<span class="comment">//报错 Uncaught SyntaxError: Unexpected identifier</span></span><br><span class="line"><span class="keyword">if</span>(a==<span class="number">1</span>)&#123;&#125;bbc=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;<span class="comment">// 正常</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> a = <span class="number">1</span>;a&lt;<span class="number">10</span>;a++)&#123;&#125;bbc=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;<span class="comment">//正常</span></span><br></pre></td></tr></table></figure>
 </code></pre></li>
 </ul>
+<h3 id="u8BED_u53E5_u548C_u8868_u8FBE_u5F0F_u7684_u533A_u522B"><a href="#u8BED_u53E5_u548C_u8868_u8FBE_u5F0F_u7684_u533A_u522B" class="headerlink" title="语句和表达式的区别"></a>语句和表达式的区别</h3><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span> + <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+</code></pre><p>这条语句先用var命令，声明了变量a，然后将1 + 3的运算结果赋值给变量a。<br><code>1 + 3</code>叫做表达式（expression），指一个为了得到返回值的计算式。语句和表达式的区别在于，前者主要为了进行某种操作，一般情况下不需要返回值；后者则是为了得到返回值，一定会返回一个值。凡是JavaScript语言中预期为值的地方，都可以使用表达式。比如，赋值语句的等号右边，预期是一个值，因此可以放置各种表达式。一条语句可以包含多个表达式。</p>
 <h1 id="u5173_u952E_u5B57_u548C_u4FDD_u7559_u5B57"><a href="#u5173_u952E_u5B57_u548C_u4FDD_u7559_u5B57" class="headerlink" title="关键字和保留字"></a>关键字和保留字</h1><p>按照规则，关键字也是语言保留的，不能用作标识符。</p>
 <ul>
 <li><p>关键字：真正意义上的保留字。</p>
@@ -143,35 +142,25 @@ count = 3;//无论实在全局范围内还是函数内，使用这种语法直�
 </code></pre><p>如果未在 var 语句中初始化您的变量，它将自动采用 undefined 值，试图访问一个未初始化的变量会导致一个 ReferenceError 异常被抛出</p>
 </li>
 </ol>
-<blockquote>
-<p>隐式全局变量和明确定义的全局变量间有些小的差异，就是通过delete操作符让变量未定义的能力。</p>
-<ul>
-<li>通过var创建的全局变量（任何函数之外的程序中创建）是不能被删除的。</li>
-<li><p>无var创建的隐式全局变量（无视是否在函数中创建）是能被删除的。<br>这表明，在技术上，隐式全局变量并不是真正的全局变量，但它们是全局对象的属性。属性是可以通过delete操作符删除的，而变量是不能的：</p>
-<pre><code>// 定义三个全局变量
-var global_var = 1;
-global_novar = 2; // 反面教材
-(function () {
-   global_fromfunc = 3; // 反面教材
-}());
-
-// 试图删除
-delete global_var; // false
-delete global_novar; // true
-delete global_fromfunc; // true
-
-// 测试该删除
-typeof global_var; // &quot;number&quot;
-typeof global_novar; // &quot;undefined&quot;
-typeof global_fromfunc; // &quot;undefined&quot;
-</code></pre></li>
-</ul>
-<hr>
-<p>了解另外两种变量的声明方式：</p>
+<p>如果使用<code>var</code>重新声明一个已经存在的变量，是无效的。</p>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> x;</span><br><span class="line">x <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+</code></pre><p>但是，如果第二次声明的同时还赋值了，则会覆盖掉前面的值。</p>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> x = <span class="number">2</span>;</span><br><span class="line">x <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+</code></pre><p>使用var声明的全局变量和不使用var的区别：</p>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义三个全局变量</span></span><br><span class="line"><span class="keyword">var</span> global_var = <span class="number">1</span>;</span><br><span class="line">global_novar = <span class="number">2</span>; <span class="comment">// 反面教材</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    global_fromfunc = <span class="number">3</span>; <span class="comment">// 反面教材</span></span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 试图删除</span></span><br><span class="line"><span class="keyword">delete</span> global_var; <span class="comment">// false</span></span><br><span class="line"><span class="keyword">delete</span> global_novar; <span class="comment">// true</span></span><br><span class="line"><span class="keyword">delete</span> global_fromfunc; <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试该删除</span></span><br><span class="line"><span class="keyword">typeof</span> global_var; <span class="comment">// "number"</span></span><br><span class="line"><span class="keyword">typeof</span> global_novar; <span class="comment">// "undefined"</span></span><br><span class="line"><span class="keyword">typeof</span> global_fromfunc; <span class="comment">// "undefined"</span></span><br></pre></td></tr></table></figure>
+</code></pre><p>原因：使用var命令声明变量时（或者使用属性赋值的方式声明变量），变量的可配置性为true。</p>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">a2 = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyDescriptor(<span class="keyword">this</span>,<span class="string">'a2'</span>)</span><br><span class="line"><span class="comment">// Object &#123;</span></span><br><span class="line"><span class="comment">//	value: 1, </span></span><br><span class="line"><span class="comment">//	writable: true, </span></span><br><span class="line"><span class="comment">//	enumerable: true, </span></span><br><span class="line"><span class="comment">//	configurable: true</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者写成</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.a3 = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyDescriptor(<span class="keyword">this</span>,<span class="string">'a3'</span>)</span><br><span class="line"><span class="comment">// Object &#123;</span></span><br><span class="line"><span class="comment">//	value: 1, </span></span><br><span class="line"><span class="comment">//	writable: true, </span></span><br><span class="line"><span class="comment">//	enumerable: true, </span></span><br><span class="line"><span class="comment">//	configurable: true</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+</code></pre><hr>
+<p>了解另外两种变量的声明方式：<br>&gt;</p>
 <pre><code>* let：声明块范围局部变量，可选初始化值。
 * const：声明一个只读命名常量。
-</code></pre></blockquote>
-<h2 id="u6570_u636E_u7C7B_u578B"><a href="#u6570_u636E_u7C7B_u578B" class="headerlink" title="数据类型"></a>数据类型</h2><p>ECMAScript是变量松散类型语言(动态数据类型语言)，即每个变量只是一个占位符，其类型并不固定，可以随时变化，这意味着你定义变量时不必指定变量类型，而且变量类型会在脚本执行需要时自动转换。但是，<span style="color: red;">数据本身和各种运算是有类型的</span>。<br>ECMAScript 中有5 种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number和String。还有1 种复杂数据类型——Object，Object 本质上是由一组无序的名值对组成的。</p>
+</code></pre><h2 id="u6570_u636E_u7C7B_u578B"><a href="#u6570_u636E_u7C7B_u578B" class="headerlink" title="数据类型"></a>数据类型</h2><p>ECMAScript是变量松散类型语言(动态数据类型语言)，即每个变量只是一个占位符，其类型并不固定，可以随时变化，这意味着你定义变量时不必指定变量类型，而且变量类型会在脚本执行需要时自动转换。但是，<span style="color: red;">数据本身和各种运算是有类型的</span>。<br>ECMAScript 中有5 种简单数据类型（也称为基本数据类型(primitive type)）：Undefined、Null、Boolean、Number和String。还有1 种复杂数据类型——Object，Object 本质上是由一组无序的名值对组成的。(ES6又新增了第七种Symbol类型的值)。<br>Object对象又可以分成三个子类型：</p>
+<ul>
+<li>狭义的对象（object）</li>
+<li>数组（array）</li>
+<li>函数（function）<code>function f() {} console.log(typeof f) //&quot;function&quot;</code></li>
+</ul>
+<p>狭义的对象和数组是两种不同的数据组合方式，而函数其实是处理数据的方法。</p>
 <h3 id="undefined_u7C7B_u578B"><a href="#undefined_u7C7B_u578B" class="headerlink" title="undefined类型"></a>undefined类型</h3><p><a href="http://www.yangshengdonghome.com/2016/01/29/%E5%A5%BD%E5%A5%BD%E5%AD%A6%E5%AD%A6undefined%EF%BC%81/" target="_blank" rel="external">好好学学undefined！</a></p>
 <h3 id="null_u7C7B_u578B"><a href="#null_u7C7B_u578B" class="headerlink" title="null类型"></a>null类型</h3><p>null类型也只有一个值：null , 表示一个变量中没有包含有效数据，null表示”没有对象”。<code>字面值null</code>在这里意为<code>空值</code>、<code>空对象</code>的意思，更确切的说，一个被赋值为null的变量没有保存有效的对象等，可以通过给一个变量赋值为null来清空变量中的内容(不删除变量)。</p>
 <p>主要用处：</p>
@@ -201,28 +190,23 @@ console.log(b == null) // true 两个等号为true
 <p>undefined == null //true <a href="https://www.w3.org/html/ig/zh/wiki/ES5/expressions#.E7.AD.89.E5.80.BC.E8.BF.90.E7.AE.97.E7.AC.A6" target="_blank" rel="external">为什么相等？</a></p>
 </blockquote>
 <h3 id="Boolean_u7C7B_u578B"><a href="#Boolean_u7C7B_u578B" class="headerlink" title="Boolean类型"></a>Boolean类型</h3><p>boolean类型只有两个字面值：<code>true</code>和<code>false</code> 。 但在Javascript中，所有类型的值都可以转化为与boolean等价的值。要将一个值转换为其对应的Boolean值，可以调用类型转换函数Boolean()。其中转换结果为false的值有(false, “”, +0, -0, NaN, null, undefined)，其他值(包括空对象、空数组)均将转换为true。</p>
-<pre><code>typeof true; // &quot;boolean&quot;
-
-typeof false; // &quot;boolean&quot;
-
-Boolean(new Object()); //true
-
-Boolean(undefined); //false
-
-Boolean(null); //false
-
-Boolean(&apos;&apos;); //false
-
-Boolean(0); //false
-
-Boolean(100); // true
-
-Boolean([]) // true
-
-Boolean({}) // true
-</code></pre><p>if判断语句中自动调用Boolean()。</p>
-<pre><code>if (x = y + z){} //将值 y + z 赋给变量 x，然后检查整个表达式的结果（x 的值）是否为 0。
+<p>产生原因：下列运算符会返回布尔值。</p>
+<ul>
+<li>两元逻辑运算符： <code>&amp;&amp;</code> (And)，<code>||</code> (Or)</li>
+<li>前置逻辑运算符： <code>!</code> (Not)</li>
+<li>相等运算符：<code>===</code>，<code>!==</code>，<code>==</code>，<code>!=</code></li>
+<li><p>比较运算符：<code>&gt;</code>，<code>&gt;=</code>，<code>&lt;</code>，<code>&lt;=</code></p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">// "boolean"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">false</span>; <span class="comment">// "boolean"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Boolean</span>(<span class="keyword">new</span> <span class="built_in">Object</span>()); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Boolean</span>(<span class="literal">undefined</span>); <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Boolean</span>(<span class="literal">null</span>); <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Boolean</span>(<span class="string">''</span>); <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Boolean</span>(<span class="number">0</span>); <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Boolean</span>(<span class="number">100</span>); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Boolean</span>([]) <span class="comment">// true</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">Boolean</span>(&#123;&#125;) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果JavaScript预期某个位置应该是布尔值，会将该位置上现有的值自动转为布尔值，比如：<br>if判断语句中自动调用Boolean()。</p>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (x = y + z)&#123;&#125; <span class="comment">//将值 y + z 赋给变量 x，然后检查整个表达式的结果（x 的值）是否为 0。</span></span><br></pre></td></tr></table></figure>
 </code></pre><h3 id="Number_u7C7B_u578B"><a href="#Number_u7C7B_u578B" class="headerlink" title="Number类型"></a>Number类型</h3><p><a href="http://www.yangshengdonghome.com/2016/01/29/%E5%A5%BD%E5%A5%BD%E5%AD%A6%E5%AD%A6number/" target="_blank" rel="external">好好学学uumber！</a></p>
+<h3 id="String_u7C7B_u578B"><a href="#String_u7C7B_u578B" class="headerlink" title="String类型"></a>String类型</h3><h2 id="u7C7B_u578B_u68C0_u9A8C"><a href="#u7C7B_u578B_u68C0_u9A8C" class="headerlink" title="类型检验"></a>类型检验</h2><ul>
+<li>typeof typeof是一元运算符，后面必须跟表达式</li>
+<li>instanceof</li>
+<li>Object.prototype.toString</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -285,7 +269,7 @@ Boolean({}) // true
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BED_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u533A_u5206_u5927_u5C0F_u5199"><span class="toc-number">1.1.</span> <span class="toc-text">区分大小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u793A_u7B26"><span class="toc-number">1.2.</span> <span class="toc-text">标示符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E25_u683C_u6A21_u5F0F__26quot_3Buse_strict_3B_26quot_3B"><span class="toc-number">1.3.</span> <span class="toc-text">严格模式 "use strict;"</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BED_u53E5"><span class="toc-number">1.4.</span> <span class="toc-text">语句</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5173_u952E_u5B57_u548C_u4FDD_u7559_u5B57"><span class="toc-number">2.</span> <span class="toc-text">关键字和保留字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u53D8_u91CF"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u58F0_u660E_u53D8_u91CF"><span class="toc-number">3.1.</span> <span class="toc-text">声明变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6570_u636E_u7C7B_u578B"><span class="toc-number">3.2.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined_u7C7B_u578B"><span class="toc-number">3.2.1.</span> <span class="toc-text">undefined类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null_u7C7B_u578B"><span class="toc-number">3.2.2.</span> <span class="toc-text">null类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean_u7C7B_u578B"><span class="toc-number">3.2.3.</span> <span class="toc-text">Boolean类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number_u7C7B_u578B"><span class="toc-number">3.2.4.</span> <span class="toc-text">Number类型</span></a></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BED_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u533A_u5206_u5927_u5C0F_u5199"><span class="toc-number">1.1.</span> <span class="toc-text">区分大小写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6807_u793A_u7B26"><span class="toc-number">1.2.</span> <span class="toc-text">标示符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E25_u683C_u6A21_u5F0F__26quot_3Buse_strict_3B_26quot_3B"><span class="toc-number">1.3.</span> <span class="toc-text">严格模式 "use strict;"</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BED_u53E5"><span class="toc-number">1.4.</span> <span class="toc-text">语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u8BED_u53E5_u548C_u8868_u8FBE_u5F0F_u7684_u533A_u522B"><span class="toc-number">1.4.1.</span> <span class="toc-text">语句和表达式的区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5173_u952E_u5B57_u548C_u4FDD_u7559_u5B57"><span class="toc-number">2.</span> <span class="toc-text">关键字和保留字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u53D8_u91CF"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u58F0_u660E_u53D8_u91CF"><span class="toc-number">3.1.</span> <span class="toc-text">声明变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6570_u636E_u7C7B_u578B"><span class="toc-number">3.2.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined_u7C7B_u578B"><span class="toc-number">3.2.1.</span> <span class="toc-text">undefined类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null_u7C7B_u578B"><span class="toc-number">3.2.2.</span> <span class="toc-text">null类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean_u7C7B_u578B"><span class="toc-number">3.2.3.</span> <span class="toc-text">Boolean类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number_u7C7B_u578B"><span class="toc-number">3.2.4.</span> <span class="toc-text">Number类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String_u7C7B_u578B"><span class="toc-number">3.2.5.</span> <span class="toc-text">String类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7C7B_u578B_u68C0_u9A8C"><span class="toc-number">3.3.</span> <span class="toc-text">类型检验</span></a></li></ol></li></ol>
  
   </div>
 
@@ -302,7 +286,7 @@ Boolean({}) // true
 		<ul>
 		
 		  
-			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>6</sup></a></li>
+			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>7</sup></a></li>
 		  
 		
 		  
@@ -319,11 +303,11 @@ Boolean({}) // true
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>10</sup></a></li>
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>11</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>4</sup></a></li>
 			
 		
 		</ul>
