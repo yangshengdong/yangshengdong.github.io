@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Numbers in JavaScript | 前端之路</title>
+    <title>numberInJavaScript | 前端之路</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="jack">
@@ -21,8 +21,8 @@ JavaScript中常被诟病的0.3 - 0.2 == 0.1原因是什么？
 
 上述问题，只有在JavaScript中有吗？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Numbers in JavaScript">
-<meta property="og:url" content="http://yoursite.com/2016/06/10/Numbers in JavaScript/index.html">
+<meta property="og:title" content="numberInJavaScript">
+<meta property="og:url" content="http://yoursite.com/2016/06/19/numberInJavaScript/index.html">
 <meta property="og:site_name" content="前端之路">
 <meta property="og:description" content="思考先想几个问题吧：
 
@@ -33,9 +33,12 @@ JavaScript中常被诟病的0.3 - 0.2 == 0.1原因是什么？
 数组的最大长度是多少？为什么是这个值？
 
 上述问题，只有在JavaScript中有吗？">
-<meta property="og:updated_time" content="2016-06-19T13:43:34.000Z">
+<meta property="og:image" content="http://yoursite.com/2016/06/19/numberInJavaScript/123.png">
+<meta property="og:image" content="http://yoursite.com/2016/06/19/numberInJavaScript/10.png">
+<meta property="og:image" content="http://yoursite.com/2016/06/19/numberInJavaScript/11.png">
+<meta property="og:updated_time" content="2016-06-19T13:52:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Numbers in JavaScript">
+<meta name="twitter:title" content="numberInJavaScript">
 <meta name="twitter:description" content="思考先想几个问题吧：
 
 JavaScript的数字为什么有0和-0？
@@ -104,14 +107,14 @@ JavaScript中常被诟病的0.3 - 0.2 == 0.1原因是什么？
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/10/Numbers in JavaScript/" title="Numbers in JavaScript" itemprop="url">Numbers in JavaScript</a>
+      <a href="/2016/06/19/numberInJavaScript/" title="numberInJavaScript" itemprop="url">numberInJavaScript</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="jack" target="_blank" itemprop="author">jack</a>
 		
   <p class="article-time">
-    <time datetime="2016-06-10T01:55:43.000Z" itemprop="datePublished"> 发表于 2016-06-10</time>
+    <time datetime="2016-06-19T13:51:58.000Z" itemprop="datePublished"> 发表于 2016-06-19</time>
     
   </p>
 </header>
@@ -168,7 +171,7 @@ JavaScript中常被诟病的0.3 - 0.2 == 0.1原因是什么？
 <li>所谓浮点数，是指小数点的位置是不固定的，通过科学计数法(这个应该不需要解释吧)的方式控制小数点的位置，表示不同的数字。这个表示方案便是IEEE 754标准使用的方案。IEEE 754标准是目前使用最广泛的浮点数运算标准。下面我们将主要讨论一下此方案。</li>
 </ul>
 <p>现在，让我们想一下小时候学习的科学计数法，比如<code>-123.456</code>这个数字，转换成科学计数法应该是：<code>-1.23456 × 10^2</code>。这里面已经包含了IEEE 754标准的主要元素。我们梳理一下：第一个，自然是正负号的问题，需要一个标志；然后，需要一个具体的数字，表示有效数字或者精度，如上例的<code>1.23456</code>；再然后，需要一个控制小数点位置的数字，如上例的<code>10^2</code>，回忆一下，我们学习科学计数法的时候，要求前面的数字的绝对值大于1而小于10，也就是小于10^2中的底数(Base)，进制固定之后，底数应该是固定的，所以这里起决定作用的是指数，也就是上例中的2。那么，有了这三个元素，我们便可以很轻松的表示出一个数字，并且灵活的调节小数点位置从而控制数字正负、精度和大小。</p>
-<p>上面的要素，转换成标准语言描述，我们称表示正负的标志叫<code>符号(Sign)</code>，表示精度的数字为<code>尾数(Mantissa)</code>或者<code>有效数字(Significand)</code>，而控制小数点位置的指数就叫<code>指数(Exponent)</code>，指数和<code>基数(Base)</code>共同作用参与计算。下图取自wikipedia，我们直观地感受下这三个要素在一个数串中的相对关系（fraction区域即等同于前面说的有效数字区域）：<br><br>了解最基本的原理后，我们来大致看一下<code>IEEE 754</code>标准做了什么。<br>首先做的事情就是规定这三个要素在一个数串中占有的位数，试想一下，如果各个实现的位数不确定，那么我们是不是很难正确的还原出原始数字？<code>IEEE 754</code>标准规定了四种表示浮点数值的方式：单精确度（32位）、双精确度（64位）、延伸单精确度（43比特以上，很少使用）与延伸双精确度（79比特以上，通常以80比特实做）。只有32位模式有强制要求，其他都是选择性的。而现在主流的语言，多提供了单精度和双精度的实现，我们在此主要比较一下这两者，如图是它们各个部分对应上图，所使用的位数如下：<br><br><br>补充一点的是，无论是科学计数法还是标准的规定，都要求有效数字（不考虑符号位）必须<code>&gt;=1 &amp;&amp; &lt;Base</code>。所以，有效数字其实是一个定点数，小数点的位置固定在有效数字域的最高位和次高位之间。那么，按照上述规定，在二进制中，最高位只能是<code>1</code>，所以标准要求省略其最高位，于是精度提高一位。比如，<code>32-bits</code>的单精度有效数字区域只有23位，但是精度却是24位；<code>64-bits</code>的双精度，拥有52位的有效数字域却是53位精度的。</p>
+<p>上面的要素，转换成标准语言描述，我们称表示正负的标志叫<code>符号(Sign)</code>，表示精度的数字为<code>尾数(Mantissa)</code>或者<code>有效数字(Significand)</code>，而控制小数点位置的指数就叫<code>指数(Exponent)</code>，指数和<code>基数(Base)</code>共同作用参与计算。下图取自wikipedia，我们直观地感受下这三个要素在一个数串中的相对关系（fraction区域即等同于前面说的有效数字区域）：<br><img src="/2016/06/19/numberInJavaScript/123.png" alt="123.png" title=""><br>了解最基本的原理后，我们来大致看一下<code>IEEE 754</code>标准做了什么。<br>首先做的事情就是规定这三个要素在一个数串中占有的位数，试想一下，如果各个实现的位数不确定，那么我们是不是很难正确的还原出原始数字？<code>IEEE 754</code>标准规定了四种表示浮点数值的方式：单精确度（32位）、双精确度（64位）、延伸单精确度（43比特以上，很少使用）与延伸双精确度（79比特以上，通常以80比特实做）。只有32位模式有强制要求，其他都是选择性的。而现在主流的语言，多提供了单精度和双精度的实现，我们在此主要比较一下这两者，如图是它们各个部分对应上图，所使用的位数如下：<br><br><br>补充一点的是，无论是科学计数法还是标准的规定，都要求有效数字（不考虑符号位）必须<code>&gt;=1 &amp;&amp; &lt;Base</code>。所以，有效数字其实是一个定点数，小数点的位置固定在有效数字域的最高位和次高位之间。那么，按照上述规定，在二进制中，最高位只能是<code>1</code>，所以标准要求省略其最高位，于是精度提高一位。比如，<code>32-bits</code>的单精度有效数字区域只有23位，但是精度却是24位；<code>64-bits</code>的双精度，拥有52位的有效数字域却是53位精度的。</p>
 <p>然后，还有一个问题，如果按照先有的约定，<code>是不是无法表示小于1的实数？</code>因为，<code>指数一定&gt;=0，有效数字一定&gt;1</code>。于是，<code>IEEE 754</code>标准提出了一个很重要的指数偏移值。它是说明指数域(Exponent占用的区域)的编码值为指数的实际值加上某个固定的值，换言之便是，如果我们根据指数域计算出的指数是<code>N</code>，那么参与计算实际浮点数的指数应该是<code>N-指数偏移值</code>。根据IEEE 754标准的规定，该固定值为<code>2^(e-1) - 1</code>，其中的<code>e</code>为存储指数的比特的长度。比如，从上图中我们看到，<code>32-bits</code>的单精度是以<code>8-bits表示一个指数域</code>，那么偏移值应该是<code>2^(8-1) - 1 = 128−1 = 127</code>。所以，容易得出，单精度浮点数的指数部分实际取值是<code>全零00000000 0-127=-127</code>到<code>全零11111111 256-127=128</code>就是<code>[-127,128]</code>。比如，某个<code>32-bits</code>单精度的指数为十进制的<code>1</code>，那么指数域的编码应该是<code>10000001</code>，某个32-bits单精度的指数域编码是<code>00000001</code>，那么该指数的实际值应该是十进制的<code>-126</code>。这样，我们就能通过偏移值将正指数转换为负指数，从而<code>使浮点数能逼近0</code>。浮点数的指数计算跟前面讨论的机器码恰好相反，<code>正数的最高位都是1，而负数的最高位都是0</code>。</p>
 <p>以上的描述，便是IEEE 754标准最需要我们了解的原理部分，但是，作为一个广泛使用的工业标准，规定这些还是远远不够的。<br>wikipedia(维基百科)对IEEE 754标准有如下描述：</p>
 <blockquote>
@@ -181,8 +184,8 @@ JavaScript中常被诟病的0.3 - 0.2 == 0.1原因是什么？
 <ul>
 <li>指数全0且尾数小数部分全0，则这个数字为±0。（符号位决定正负）</li>
 <li>指数为2^e - 1且尾数的小数部分全0，这个数字是±∞。（符号位决定正负）</li>
-<li>指数为2^e - 1且尾数的小数部分非0，这个数字是NaN。<br>结合前面的规约数，非规约数以及三个特殊值，可以得到如下总结：
-现在，让我们回忆一下，各种语言中普遍描述的双精度浮点数的范围：<code>[-1.7 × 10^(-308),1.7 × 10^308]</code>。打个岔，想象一个有300多位的十进制数字的适用情形，私以为远超过普通人想象力的边界。这个范围为什么是这个范围呢？我觉得，通过上面的讨论，大家应该能清晰，1.7/308这些数字出现的必然原因。<br>首先，我们应该很容易根据偏移量得出双精度浮点数的计算公式：
+<li>指数为2^e - 1且尾数的小数部分非0，这个数字是NaN。<br>结合前面的规约数，非规约数以及三个特殊值，可以得到如下总结：<img src="/2016/06/19/numberInJavaScript/10.png" alt="10.png" title="">
+现在，让我们回忆一下，各种语言中普遍描述的双精度浮点数的范围：<code>[-1.7 × 10^(-308),1.7 × 10^308]</code>。打个岔，想象一个有300多位的十进制数字的适用情形，私以为远超过普通人想象力的边界。这个范围为什么是这个范围呢？我觉得，通过上面的讨论，大家应该能清晰，1.7/308这些数字出现的必然原因。<br>首先，我们应该很容易根据偏移量得出双精度浮点数的计算公式：<img src="/2016/06/19/numberInJavaScript/11.png" alt="11.png" title="">
 然后，以正数为例，按照上述特殊值中<code>±∞</code>和<code>NaN</code>的约定，指数的最大值应该满足指数取规约数的指数范围的最大值，然后小数部分取小数部分的最大值，可以得出这个二进制的数字应该是：<br>  0 11111111110 11..11(52个)<br>转换为16进制表示：<br>0x7fef ffff ffff ffff<br>那么，根据前述规约数的原理，反编码便得到十进制的：<code>1.7976931348623157 x 10^308</code>。类似的道理，Sign位取反，便是范围的下限。<br>到此为止吧，我对<code>IEEE 754</code>标准也是最近几天稍加学习，再说多了就误导大家了。通过这几天的学习，我感觉，我们在理解的IEEE 754标准及浮点数的时候，要特别注意将精度和范围两个概念分别开来。范围只是一个模糊的界限，精度才是能准确表达的数字。</li>
 </ul>
 <h2 id="u56DE_u5230JavaScript"><a href="#u56DE_u5230JavaScript" class="headerlink" title="回到JavaScript"></a>回到JavaScript</h2><p>在上面的讨论中，我们很少提及JavaScript，似乎有点背离今天的主题了，但是，在了解了前述的原理之后，我们对JavaScript中数字的把握将”水到渠成”。这终将是一次，铺垫多于正文，开胃菜多于正餐的讨论。嗯，快喊小伙伴，正餐开始了！</p>
@@ -304,7 +307,7 @@ JavaScript中常被诟病的0.3 - 0.2 == 0.1原因是什么？
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/06/10/Numbers in JavaScript/" data-title="Numbers in JavaScript | 前端之路" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/06/19/numberInJavaScript/" data-title="numberInJavaScript | 前端之路" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
